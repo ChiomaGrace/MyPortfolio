@@ -1,0 +1,199 @@
+.intro-sitemap-wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: calc(100% - 82px); */
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.intro-sitemap-wrapper .description {
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.intro-sitemap-wrapper .description p, h2, h3, h4 {
+    margin-bottom: 4px;
+}
+
+.intro-sitemap-wrapper .description h5 {
+    color: var(--slate-purple);
+    padding-bottom: 14px;
+}
+
+.intro-sitemap-wrapper .description .strike-through {
+    color: red;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.intro-sitemap-wrapper .description .slim-shady {
+    color: var(--slate-purple);
+}
+
+.intro-sitemap-wrapper .description h2 {
+    color: var(--blurple);
+    font-weight: 800;
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+.intro-sitemap-wrapper .description h3 {
+    color: white;
+    margin-bottom: 6px;
+}
+
+.intro-sitemap-wrapper .description p {
+    color: var(--slate);
+    font-size: 16px;
+    padding-top: 12px;
+    line-height: 1.4;
+}
+
+.intro-sitemap-wrapper .description .simpleview {
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.intro-sitemap-wrapper .description .simpleview:hover {
+    text-decoration: underline;
+}
+
+.intro-sitemap-wrapper .heading {
+    text-align: center;
+    color: white;
+    margin-right: auto;
+    margin-bottom: 12px;
+}
+
+.intro-sitemap-wrapper .site-map-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #282727;
+    color: var(--slate);
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.intro-sitemap-wrapper .site-map-item:hover {
+    background-color: transparent;
+    border: 1px solid var(--darker-blue);
+}
+
+.intro-sitemap-wrapper .site-map-item:hover > .site-map-text h3 {
+    color: var(--darker-blue);
+}
+
+.intro-sitemap-wrapper .site-map-item:hover > .site-map-text {
+    color: white;
+}
+
+.intro-sitemap-wrapper .site-map-item .site-map-text {
+    flex: 1 0 80%;
+    font-size: 14px;
+}
+
+.intro-sitemap-wrapper .site-map-item .site-map-text h3 {
+    color: var(--slate-purple);
+    text-decoration: none;
+}
+
+.intro-sitemap-wrapper .site-map-item .triangle {
+    background-image: linear-gradient(to top right, var(--darker-blue) 44%, transparent 44%);
+    height: auto;
+    width: 100%;
+    position: relative;
+    transform: rotate(90deg);
+    top: -10px;
+    z-index: 1;
+}
+
+.intro-sitemap-wrapper .site-map-item .triangle i {
+    position: relative;
+    transform: rotate(-92deg);
+    top: 31px;
+    left: 3px;
+    color: white;
+}
+
+/* The below code is for a media query(tablet) */
+
+@media (min-width: 640px) {
+
+    .intro-sitemap-wrapper {
+        flex-flow: row wrap;
+        flex-wrap: nowrap;
+        align-items: center;    
+        padding: 0px;
+        margin: 0px 10px 0px 10px;
+    }
+    
+    .intro-sitemap-wrapper .description {
+        align-self: center;
+        width: 50%;
+        margin-bottom: 0px;
+        height: 100%;
+    }
+
+    .intro-sitemap-wrapper .description h5 {
+        color: var(--slate-purple);
+        padding-bottom: 5px;
+    }
+
+    .intro-sitemap-wrapper .site-map-items {
+        margin-left: 40px;
+    }
+
+    .intro-sitemap-wrapper .site-map-item {
+        width: 100%;
+    }
+
+    .intro-sitemap-wrapper .site-map-item .site-map-text {
+        /* flex: 1 0 75%; */
+        font-size: 14px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+/* The above code is for a media query(tablet) */
+
+
+/* The below code is for a media query(laptop) */
+
+@media (min-width: 1024px) {
+
+    .intro-sitemap-wrapper .site-map-items {
+        flex-grow: 1;
+    }
+
+    .intro-sitemap-wrapper .site-map-item .triangle {
+        background-image: linear-gradient(to top right, transparent 50%, var(--darker-blue) 50%);
+        height: auto;
+        width: 100%;
+        position: relative;
+        transform: scalex(-1);
+    }
+
+    .intro-sitemap-wrapper .site-map-item .triangle i {
+        transform: rotate(0deg);
+        width: 100%;
+        text-align: end;
+        top: 12px;
+        left: -4px;
+    }
+
+    .intro-sitemap-wrapper .site-map-item .site-map-text {
+        /* flex: 1 0 92%; */
+        flex: 1 0 80%;
+
+    }
+
+
+}
+
+/* The above code is for a media query(laptop) */
