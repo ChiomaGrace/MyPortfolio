@@ -199,3 +199,10 @@ a {
     padding: 20px;
     align-items: center;
 }
+
+.about-me-container {
+    display: flex;
+    height: calc(100% - 72px);
+    padding: 20px;
+    align-items: center;
+}

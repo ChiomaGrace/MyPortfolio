@@ -40,8 +40,9 @@
           <i class="fas fa-times"></i>
         </div>
       </div>
-      <app-intro-sitemap class="intro-sitemap-container"></app-intro-sitemap>
-      <app-about-me class="about-me-container"></app-about-me>
+      <router-outlet></router-outlet>
+      <!-- <app-intro-sitemap *ngIf ="showHideIntroSiteMap" routerLink="/" class="intro-sitemap-container"></app-intro-sitemap>
+      <app-about-me class="about-me-container" routerLink="about-me" ></app-about-me> -->
     </div>
   </div>
   <div class="status-bar">
@@ -56,4 +57,3 @@
   </div>
 </div>
 
-<router-outlet></router-outlet>
