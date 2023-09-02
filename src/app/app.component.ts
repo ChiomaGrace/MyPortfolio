@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { SharedService } from './shared.service';
-import { Subscription } from 'rxjs';
-import { ActivatedRoute, Router } from '@angular/router';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -11,47 +9,173 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'myPortfolio';
-  showHideIntroSiteMap : boolean = true; // This property toggles the intro sitemap. The default is set to true meaning it is visible.
-  showHideAboutMe = false; // This property toggles the intro sitemap. The default is set to false meaning it is not visible.
+  showIntroSiteMapComponent: boolean = true;
+  showWelcomeNavItem: boolean = true;
+  welcomeNavStyling = 'active-nav-styling';
+  showAboutMeComponent: boolean = false;
+  aboutMeNavStyling = 'default-nav-styling';
+  showExperienceComponent: boolean = false;
+  experienceNavStyling = 'default-nav-styling';
+  showWorkComponent: boolean = false;
+  workNavStyling = 'default-nav-styling';
+  showContactComponent: boolean = false;
+  contactNavStyling = 'default-nav-styling';
+  showNavItems: boolean = false;
   
-  clickEventsubscription:Subscription;
-  constructor(private sharedService:SharedService, private router:Router, private activeRoute: ActivatedRoute) {
-    this.clickEventsubscription = this.sharedService.getAboutMeClickEvent().subscribe(()=>{ //This listens to the button click that occured on the into-sitemap
-      this.showHideIntroSiteMap = !this.showHideIntroSiteMap;
-      this.showHideAboutMe = true;
-    })    
-
-    // if(this.router.config[1].path = 'about-me') {
-    //   console.log(this.router.config[1].path)
-    //   console.log("This is the about me route")
-    
-    // }
-
+  constructor(  private router: Router ) {
+    console.log("This is the app component route:", this.router.url);
   }
-
-  
 
   ngOnInit() {
-    // The below conditional means the about me route is displaying.
-    // if(this.showHideAboutMe = true) {
-    //   this.showHideIntroSiteMap = true
-    //   console.log("This means the About Me component is displaying");
-    //   this.showHideAboutMe
-    // }
-    // The above conditional means the about me route is displaying.
- 
-    // console.log("This console log is on the app component.ts", this.router.url);
-    console.log("This console log is on the app component: please say about me", this.activeRoute.url);
-
-
   }
+
+  homeNavItem() {
+    console.log("The value of all the children components after the click on the home nav item:", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showWorkComponent:", this.showWorkComponent, "showContactComponent:", this.showContactComponent);
+    console.log("As stated above, these console logs mean the home nav button was clicked. The value of all the children components should now be false.");
+    this.showIntroSiteMapComponent = true;
+    this.showWelcomeNavItem = true;
+    this.showNavItems = false;
+    this.showAboutMeComponent = false;
+    this.showExperienceComponent = false;
+    this.showWorkComponent = false;
+    this.showContactComponent = false;
+    console.log("Checking the boolean is now false", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showWorkComponent:", this.showWorkComponent, "showContactComponent:", this.showContactComponent);
+  }
+
+  showHideAboutMeComponent(valueEmitted: any) {
+    this.showAboutMeComponent = valueEmitted;
+    this.showNavItems = true;
+    this.showWelcomeNavItem = false;
+    this.showIntroSiteMapComponent = false;
+    this.showExperienceComponent = false;
+    this.experienceNavStyling = 'default-nav-styling';
+    this.showWorkComponent = false;
+    this.workNavStyling = 'default-nav-styling';
+    this.showContactComponent = false;
+    this.contactNavStyling = 'default-nav-styling'
+    console.log("This is the showHideAboutMeComponent function in the app component AFTER the child data comes through(about me button was clicked), so the value should be true:", this.showAboutMeComponent )
+    this.aboutMeNavStyling = 'active-nav-styling';
+  }
+
+  aboutMeNavLink() {
+    this.showAboutMeComponent = true;
+    this.showIntroSiteMapComponent = false;
+    this.showExperienceComponent = false;
+    this.experienceNavStyling = 'default-nav-styling';
+    this.showWorkComponent = false;
+    this.workNavStyling = 'default-nav-styling';
+    this.showContactComponent = false;
+    this.contactNavStyling = 'default-nav-styling';
+    console.log("This means the About Me nav link was clicked on in the App  Component. The value is now:", this.showAboutMeComponent);
+    if(this.aboutMeNavStyling == 'default-nav-styling') {
+      this.aboutMeNavStyling = 'active-nav-styling';
+    } else {
+      this.aboutMeNavStyling = 'default-nav-styling';
+    }
+  }
+
+  showHideExperienceComponent(valueEmitted: any) {
+    this.showExperienceComponent = valueEmitted;
+    this.showNavItems = true;
+    console.log("This is the showHideExperienceComponent function in the app component AFTER the child data comes through(experience button was clicked), so the value should be true:", this.showExperienceComponent )
+    this.showIntroSiteMapComponent = false;
+    this.showWelcomeNavItem = false;
+    this.showAboutMeComponent = false;
+    this.aboutMeNavStyling = 'default-nav-styling';
+    this.showWorkComponent = false;
+    this.workNavStyling = 'default-nav-styling';
+    this.showContactComponent = false;
+    this.contactNavStyling = 'default-nav-styling'
+    console.log("This console log makes sure the other components are set to be hidden.", "introSiteMapComponent:", this.showIntroSiteMapComponent, "aboutMeComponent:", this.showAboutMeComponent,"showWorkComponent:", this.showWorkComponent, "showContactComponent:", this.showContactComponent);
+    this.experienceNavStyling = 'active-nav-styling';
+  }
+
+  experienceNavLink() {
+    this.showExperienceComponent = true;
+    this.showIntroSiteMapComponent = false;
+    this.showAboutMeComponent = false;
+    this.aboutMeNavStyling = 'default-nav-styling';
+    this.showWorkComponent = false;
+    this.workNavStyling = 'default-nav-styling';
+    this.showContactComponent = false;
+    this.contactNavStyling = 'default-nav-styling';
+    console.log("This means the Experience nav link was clicked on in the App  Component. The value is now:", this.showExperienceComponent);
+    if(this.experienceNavStyling == 'default-nav-styling') {
+      this.experienceNavStyling = 'active-nav-styling';
+    } else {
+      this.experienceNavStyling = 'default-nav-styling';
+    }
+  }
+
+  showHideWorkComponent(valueEmitted: any) {
+    this.showWorkComponent = valueEmitted;
+    this.showNavItems = true;
+    console.log("This is the showHideWorkComponent function in the app component AFTER the child data comes through(work button was clicked), so the value should be true:", this.showWorkComponent )
+    this.showIntroSiteMapComponent = false;
+    this.showWelcomeNavItem = false;
+    this.showAboutMeComponent = false;
+    this.aboutMeNavStyling = 'default-nav-styling'
+    this.showExperienceComponent = false;
+    this.experienceNavStyling = 'default-nav-styling';
+    this.showContactComponent = false;
+    this.contactNavStyling = 'default-nav-styling'
+    console.log("This console log makes sure the other components are set to be hidden.", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showContactComponent:", this.showContactComponent);
+    this.workNavStyling = 'active-nav-styling';
+  }
+
+  workNavLink() {
+    this.showWorkComponent = true;
+    this.showIntroSiteMapComponent = false;
+    this.showAboutMeComponent = false;
+    this.aboutMeNavStyling = 'default-nav-styling';
+    this.showExperienceComponent = false;
+    this.experienceNavStyling = 'default-nav-styling';
+    this.showContactComponent = false;
+    this.contactNavStyling = 'default-nav-styling';
+    console.log("This means the Work nav link was clicked on in the App Component. The value is now:", this.showWorkComponent);
+    if(this.workNavStyling = 'default-nav-styling') {
+      this.workNavStyling = 'active-nav-styling';
+    } else {
+      this.workNavStyling = 'default-nav-styling';
+    }
+  }
+
+  showHideContactComponent(valueEmitted: any) {
+    this.showContactComponent = valueEmitted;
+    this.showNavItems = true;
+    console.log("This is the showHideContactComponent function in the app component AFTER the child data comes through(work button was clicked), so the value should be true:", this.showWorkComponent )
+    this.showWelcomeNavItem = false;
+    this.showIntroSiteMapComponent = false;
+    this.showAboutMeComponent = false;
+    this.aboutMeNavStyling = 'default-nav-styling'
+    this.showExperienceComponent = false;
+    this.experienceNavStyling = 'default-nav-styling';
+    this.showWorkComponent = false;
+    this.workNavStyling = 'default-nav-styling';
+    console.log("This console log makes sure the other components are set to be hidden.", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showWorkComponent:", this.showWorkComponent);
+    this.contactNavStyling = 'active-nav-styling';
+  }
+
+  contactNavLink() {
+    this.showContactComponent = true;
+    this.showIntroSiteMapComponent = false;
+    this.showAboutMeComponent = false;
+    this.aboutMeNavStyling = 'default-nav-styling';
+    this.showExperienceComponent = false;
+    this.experienceNavStyling = 'default-nav-styling';
+    this.showWorkComponent = false;
+    this.workNavStyling = 'default-nav-styling';
+    console.log("This means the Contact nav link was clicked on in the App Component. The value is now:", this.showContactComponent);
+    if(this.contactNavStyling = 'default-nav-styling') {
+      this.contactNavStyling = 'active-nav-styling';
+    } else {
+      this.contactNavStyling = 'default-nav-styling';
+    }
+  }
+
   
-  checkComponent() {
-    console.log("This function checks which component is showing");
-  }
 
 }
-
 
 
 

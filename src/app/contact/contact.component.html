@@ -1,0 +1,21 @@
+<!-- <p>contact works!</p> -->
+
+
+<form #contactForm ="ngForm" (ngSubmit)="submit(contactForm)" >
+    <p style="background-color: red;"> {{submittedEmail | json }}</p>
+    <input type="text" class="form-control" name="name" ngModel>
+    <button type="submit"> Send Email</button>
+</form>
+
+<div class="contact-wrapper">
+    <h1 class="title">Contact</h1>
+    <div class="iphone">
+        <div class="screen">
+            <div class="notch">
+                <div class="camera"></div>
+                <div class="speaker"></div>
+            </div>
+        </div>
+        <p>testing</p>
+    </div>
+</div>

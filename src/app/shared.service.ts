@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,23 +8,14 @@ import { Observable, Subject } from 'rxjs';
 
 export class SharedService {
 
-  private subject = new Subject<any>();
+  constructor(private _httpClient: HttpClient) { }
 
-  sendClickEvent() {
-    this.subject.next(true);
+    sendingEmailService(submittedEmail : any){
+    console.log("This is the send email service function", submittedEmail)
+    return this._httpClient.post('/sendEmail', submittedEmail)
   }
 
-  getClickEvent() : Observable<any> {
-    return this.subject.asObservable();
-  }
-  
-  sendAboutMeClickEvent() {
-    this.subject.next(true);
-  }
 
-  getAboutMeClickEvent() : Observable<any> {
-    return this.subject.asObservable();
-  }
+  // Step 3 of FormData configure the service.ts and its needed functions so any .ts file can call on the service to provide it data
 
-  constructor() { }
 }

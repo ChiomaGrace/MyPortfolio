@@ -3,15 +3,6 @@
     <div class="column">
       <img src="assets/images/vs-code-icon.png" alt="Visual Studios Logo">
       <button>&#9776;</button>
-      <!-- <p class="menu-items">File</p>
-      <p class="menu-items">Edit</p>
-      <p class="menu-items">Selection</p>
-      <p class="menu-items">View</p>
-      <p class="menu-items">Go</p>
-      <p class="menu-items">...</p>
-      <p class="menu-items">Run</p>
-      <p class="menu-items">Terminal</p>
-      <p class="menu-items">Help</p> -->
     </div>
     <div class="column">
       <p class="menu-bar-title">Welcome - Visual Studios Code</p>
@@ -24,25 +15,71 @@
   </div>
   <div class="page">
     <div class="side-bar">
-      <i class="far fa-file"></i>
-      <i class="fas fa-search"></i>
-      <i class="fas fa-code-branch"></i>
-      <i class="fas fa-play"></i>
-      <i class="fas fa-bookmark"></i>
+      <a href="https://github.com/ChiomaGrace">
+        <i class="fa-brands fa-github" alt="Github" title="GitHub"></i>
+      </a>
+      <a href="mailto:chiomau@alumni.stanford.edu">
+        <i class="far fa-envelope" alt="Email" title="Email"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/chioma-ubogagu-4907b890">
+        <i class="fa-brands fa-linkedin" alt="LinkedIn" title="LinkedIn"></i>
+      </a>
+      <a href="https://www.youtube.com/watch?v=rmSvcZjl1RA">
+        <i class="fa-brands fa-youtube" alt="YouTube" title="YouTube"></i>
+      </a>
       <i class="fas fa-user-circle"></i>
       <i class="fas fa-cog"></i>
     </div>
     <div class="content">
       <div class="window-bar">
-        <div class="window-tab">
-          <img src="assets/images/vs-code-icon.png" alt="Visual Studios Logo">
+        <div class="windowTab" [ngClass]="welcomeNavStyling" *ngIf = "showWelcomeNavItem == true; else notHomePage">
+          <i class="fa-solid fa-door-open"></i>
           <p>Welcome</p>
           <i class="fas fa-times"></i>
         </div>
+          <ng-template #notHomePage>
+            <a class="button" type="button" routerLink="/" (click)="homeNavItem()" *ngIf ="showNavItems">
+              <div class="windowTab">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+                <i class="fas fa-times"></i>
+              </div>
+            </a>
+          </ng-template>
+        <a class="button" type="button" routerLink="about-me">
+          <div class="windowTab" [ngClass]="aboutMeNavStyling" (click)="aboutMeNavLink()" *ngIf ="showNavItems">
+            <i class="fa-solid fa-child-reaching"></i>
+            <p>About Me</p>
+            <i class="fas fa-times"></i>
+          </div>
+        </a>
+        <a class="button" type="button" routerLink="experience">
+          <div class="windowTab" [ngClass]="experienceNavStyling" (click)="experienceNavLink()" *ngIf ="showNavItems">
+            <i class="fa-solid fa-pencil"></i>
+            <p>Experience</p>
+            <i class="fas fa-times"></i>
+          </div>
+        </a>
+        <a class="button" type="button" routerLink="work">
+          <div class="windowTab" [ngClass]="workNavStyling" (click)="workNavLink()" *ngIf ="showNavItems">
+            <i class="fa-solid fa-laptop"></i>
+            <p>Work</p>
+            <i class="fas fa-times"></i>
+          </div>
+        </a>
+        <a class="button" type="button" routerLink="contact">
+          <div class="windowTab" [ngClass]="contactNavStyling" (click)="contactNavLink()" *ngIf ="showNavItems">
+            <i class="fa-solid fa-address-book"></i>
+            <p>Contact</p>
+            <i class="fas fa-times"></i>
+          </div>
+        </a>
       </div>
-      <router-outlet></router-outlet>
-      <!-- <app-intro-sitemap *ngIf ="showHideIntroSiteMap" routerLink="/" class="intro-sitemap-container"></app-intro-sitemap>
-      <app-about-me class="about-me-container" routerLink="about-me" ></app-about-me> -->
+      <app-about-me *ngIf="showAboutMeComponent" [clickedHomeNavItem]="homeNavItem"></app-about-me>
+      <app-experience *ngIf="showExperienceComponent" [clickedHomeNavItem]="homeNavItem"></app-experience>
+      <app-work *ngIf="showWorkComponent" [clickedHomeNavItem]="homeNavItem"></app-work>
+      <app-contact *ngIf="showContactComponent" [clickedHomeNavItem]="homeNavItem"></app-contact>
+      <app-intro-sitemap *ngIf="showIntroSiteMapComponent" (aboutMeEvent)="showHideAboutMeComponent($event)" (experienceEvent)="showHideExperienceComponent($event)" (workEvent)="showHideWorkComponent($event)" (contactEvent)="showHideContactComponent($event)" ></app-intro-sitemap>
     </div>
   </div>
   <div class="status-bar">
@@ -56,4 +93,5 @@
     <i class="far fa-bell"></i>
   </div>
 </div>
+<!-- <router-outlet></router-outlet> -->
 

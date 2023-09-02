@@ -1,24 +1,68 @@
 <div class="about-me-wrapper ">
-    <div class="column">
-      <h1> About Me</h1>
-        <p>Hello! My name is Chioma, and I enjoy flipping ideas to a visual on the world wide web. Technically my interest in web development started back in 2004 when I edited my Myspace Top 8 to a Top 16. The process of me not wanting to exclude any of my friends ended up teaching me a lot about HTML and CSS!</p>
-        <p>. After the mySpace/AOL Instant Messenger days, I attended Stanford University to explore a variety of interests. I graduated with a Film & Media degree while also fulfilling my pre-med requirements. Shout out to Grey's Anatomy for the inspo! Outside the classroom I was a part of the women's soccer team that won the first National Championship in the program's history. Go Card!</p>
-        <p>Post graduation I got to live my dream playing professional football(soccer) in four different countries for about a decade. I also had the opportunity to represent two of my three nationalites (England and USA) at the international level.</p>
-        <p> I am someone who constantly loves to learn, so during the pandemic I circled back to my tech curiosity and enrolled in a bootcamp to become a certified full stack software developer.</p>
-        <p> Fast forward to today, I am growing everyday as a developer at Simpleview Inc. My main focus is </p>
-        <p>Here are a few technologies I've been working with recently:</p>
+    <div class="column slider">
+      <!-- <div class="arrows"> -->
+        <div class="left-arrow">
+          <i class="fa-solid fa-chevron-left" (click)="goToPrev()"></i>
+        </div>
+        <div class="right-arrow">
+          <i class="fa-solid fa-chevron-right" (click)="goToNext()"></i>
+        </div>
+      <!-- </div>  -->
+      <h1 class="title"> About Me</h1>
+      <div class="slide-content" *ngIf = "slideContent && slideContent.length > 0">
+        <p class="slide-text" *ngFor="let slide of slideContent; let i=index" [ngClass] = "{'slide-active' : selectedIndex === i}"> {{slide.content}}</p>
+      </div>
+      <div class="dots-container">
+        <i *ngFor="let dot of slideContent; let i = index" [ngClass]= "{'dot-active': selectedIndex === i}" (click)="showCurrentSlide(i)" class="fa-solid fa-circle"></i>
+      </div>
     </div>
     <div class="column">
-        <div class="flip-card-container">
+      <div class="flip-card-container">
+          <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+              <img src="assets/images/profile-pic.jpg" class="profile-pic" alt="A profile photo of Chioma Ubogagu">
             </div>
             <div class="flip-card-back">
-              <h1>John Doe</h1>
-              <p>Architect & Engineer</p>
-              <p>We love that guy</p>
+              <div class="flip-card-row">
+                <div class="flip-card-column">
+                  <p>Field Position</p>
+                  <p>Winger</p>
+                </div>
+                <div class="flip-card-column">
+                    <img src="assets/images/england-badge.png" class="england-badge" alt="England Badge">
+                    <h3>England</h3>
+                </div>
+                <div class="flip-card-column">
+                  <p>Preferred Foot</p>
+                  <p>L</p>
+                </div>
+              </div>
+              <div class="flip-card-row">
+                <div class="flip-card-column">
+                  <!-- <span>Caps: 3 Goals: 1</span> -->
+                  <div class="club-logos">
+                    <span>Clubs Played For:</span>
+                    <img src="assets/images/arsenal-logo.png" class="arsenal-club-logo" alt="Arsenal Football CLub Logo">
+                    <img src="assets/images/houston-dash-logo.png" class="houston-dash-logo" alt="Houston Dash Football CLub Logo">
+                    <img src="assets/images/orlando-pride-logo.png" class="orlando-pride-logo" alt="Orlando Pride Football CLub Logo">
+                    <img src="assets/images/brisbane-roar-logo.png" class="brisbane-roar-logo" alt="Brisbane Football CLub Logo">
+                    <img src="assets/images/real-madrid-logo.png" class="real-madrid-logo" alt="Real Madrid Football CLub Logo">
+                    <img src="assets/images/tottenham-logo.png" class="tottenham-logo" alt="Tottenham Hotspur Football CLub Logo">
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card-row">
+                <div class="flip-card-column">
+                  <div class="name-and-number">
+                    <h1 class="name">Ubogagu</h1>
+                    <h1 class="number">11</h1>
+                  </div>
+                  <img src="assets/images/england-action-shot.png" class="england-action-shot" alt="An action shot of Chioma Ubogagu in an England kit">
+                </div>
             </div>
-
+            </div>
+          </div>
+        </div>
     </div>
 </div>
 

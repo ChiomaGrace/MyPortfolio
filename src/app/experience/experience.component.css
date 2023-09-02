@@ -1,0 +1,257 @@
+.experience-wrapper {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.experience-wrapper .heading {
+    display: block;
+    color: var(--blurple);
+    margin-bottom: 20px;
+}
+
+.experience-wrapper .projects {
+    flex: 0 0 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.experience-wrapper .projects .project {
+    flex: 1;
+}
+
+.experience-wrapper .projects .project .video-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-video {
+    height: 434px;
+    border-radius: 10px;
+    filter: brightness(68%);
+    border: solid 10px var(--blurple);
+    object-fit: cover; 
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-video:hover {
+    border: solid 10px var(--purple);
+}
+
+.experience-wrapper .projects .project .video-wrapper .collegebook-video {
+    display: none;
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info {
+    width: 86%;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 70px;
+    left: 4px;
+    z-index: 1;
+    text-align: left;
+    margin-left: 8px;
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info .project-title, .experience-wrapper .projects .project .video-wrapper .project-description {
+    color: white;
+    margin-left: 8px;
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info .project-title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px white; 
+    margin-bottom: 4px;
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info .project-button {
+    font-size: 12px;
+    margin-left: 8px;
+    padding: 4px;
+    font-weight: bolder;
+    font-style: italic;
+    color: var(--purple);
+    border-radius: 8px;
+    background-color: var(--slate-purple);
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info .project-button:hover {
+    background-color: var(--purple);
+    color: var(--slate-purple);
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info .project-title:hover {
+    color: var(--lightest-blue);
+    -webkit-text-stroke: 1px var(--lightest-blue);
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info .project-description {
+    font-size: 12px;
+    font-style: oblique;
+    margin-top: 6px;
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info .coding-language-buttons {
+    width: 100%; 
+    margin-left: 6px;
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info .coding-language-button {
+    border-radius: 8px;
+    background-color: var(--slate);
+    width: fit-content;
+    padding: 6px;
+    color: var(--lightest-blue);
+    font-weight: 500;
+    font-size: 10px;
+    margin: 8px 2px;
+    display: inline-block;
+}
+
+.experience-wrapper .projects .project .video-wrapper .project-info .coding-language-button:hover {
+    color: white;
+}
+
+.experience-wrapper .skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.experience-wrapper .skills-section .specific-skill {
+    /* background-color: white; */
+    flex: 1;
+    /* border: solid 4px var(--slate); */
+    /* border: solid 4px var(--purple); */
+    border: solid 4px var(--blurple);
+    width: 90%;
+    text-align: center;
+    margin-bottom: 10px;
+    /* background-color: var(--slate); */
+    color: var(--slate-purple);
+}
+
+.specific-skill:nth-child(1) {
+}
+
+.specific-skill:nth-child(2) {
+}
+
+.specific-skill:nth-child(3) {
+}
+
+.experience-wrapper .skills-section .specific-skill i {
+    font-size: 44px;
+    text-align: center;
+    /* color: var(--slate-purple); */
+    color: var(--lightest-blue);
+    /* background-color: var(--slate); */
+    /* background-color: var(--blurple); */
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.experience-wrapper .skills-section .specific-skill h3 {
+    font-family: "eurostile", sans-serif;
+    font-weight: 800;
+    /* color: var(--slate); */
+    color: white;
+    margin-bottom: 20px;
+}
+
+.experience-wrapper .skills-section .specific-skill .logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    grid-row-gap: 20px;
+    margin-bottom: 10px; 
+    margin-left: 6px;
+}
+
+.experience-wrapper .skills-section .specific-skill .logos .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.experience-wrapper .skills-section .specific-skill .logos .logo .jquery-logo {
+    width: 86px;
+}
+
+@media (min-width: 375px) {
+
+    .experience-wrapper .projects .project .video-wrapper .project-video {
+        height: 480px;
+    }
+    
+    .experience-wrapper .skills-section .specific-skill {
+        width: 100%;
+    }
+}
+
+@media (min-width: 425px) {
+
+    .experience-wrapper .projects .project .video-wrapper .project-video {
+        height: 530px;
+    }
+
+    .experience-wrapper .skills-section {
+        flex-basis: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .experience-wrapper .projects .project .video-wrapper {
+    }
+
+    .experience-wrapper .projects .project .video-wrapper .collegebook-phone-video {
+        display: none;
+    }
+
+    .experience-wrapper .projects .project .video-wrapper .collegebook-video {
+        display: block;
+        height: 310px;
+    }
+
+    .experience-wrapper .skills-section {
+        flex-direction: row;
+        flex-basis: 96%;
+        margin-bottom: 80px;
+    }
+
+    .experience-wrapper .skills-section .specific-skill {
+        height: 100%;
+        margin: 0px 4px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .experience-wrapper .projects .project .video-wrapper .collegebook-video {
+        display: block;
+        height: 440px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    .experience-wrapper .projects {
+        flex: 0 0 94%;
+    }
+    
+}

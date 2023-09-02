@@ -1,0 +1,99 @@
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: red;
+}
+
+.contact-wrapper .title {
+    display: block;
+    text-align: center;
+    color: var(--blurple);
+}
+
+.contact-wrapper .iphone {
+    margin: auto;
+    border: 10px solid black;
+    border-radius: 40px;
+    width: 205px;
+    height: 448px;
+    position: relative;
+    box-shadow: 0px 20px 15px #33333335;
+    bottom: 80px;
+}
+
+.contact-wrapper .iphone .screen {
+    z-index: 10;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.contact-wrapper .iphone .notch {
+    z-index: 20;
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    top: 0;
+    left: 50px;
+    background-color: black;
+    width: 100px;
+    height: 15px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.contact-wrapper .iphone .camera {
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+    margin-bottom: 3px;
+    border-radius: 50%;
+    border: 0.2rem solid black;
+    background: #447bb5a6;
+}
+
+@media (min-width: 375px) {
+    .contact-wrapper .iphone {
+        width: 263px;
+        height: 574px;
+        bottom: 50px;
+    }
+    
+    .contact-wrapper .iphone .notch {
+        width: 124px;
+        left: 68px;
+    }
+}
+
+@media (min-width: 425px) {
+    .contact-wrapper .iphone {
+        width: 280px;
+        height: 612px;
+        bottom: 30px;
+    }
+    
+    .contact-wrapper .iphone .notch {
+        left: 78px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-wrapper .iphone {
+        width: 300px;
+        height: 656px;
+    }
+    
+    .contact-wrapper .iphone .notch {
+        left: 88px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+}
