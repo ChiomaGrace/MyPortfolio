@@ -1,0 +1,8 @@
+{
+    "/routes/" : {
+        "target" : "http://localhost:3000",
+        "pathRewrite" : {
+            "^/routes" : ""
+        }
+    }
+}

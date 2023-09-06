@@ -1,6 +1,6 @@
 const {response} = require('express');
 const {Email} = require('../models/email');
-const sharedService = require('../../shared.service')
+// const sharedService = require('../../shared.service')
 
 module.exports = {
     createEmail: (request, response) => {

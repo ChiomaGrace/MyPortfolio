@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Emails = require("../controllers/emails")
 
-module.exports = function(router) {
+// module.exports = function(router) {
 
     router.post('/', (request, response) => {
         // response.send("This is the send email function. in routes.js")
@@ -10,8 +10,13 @@ module.exports = function(router) {
         Emails.createEmail(request, response)
     })
 
+    router.post('/', (request, response) => {
+        response.send("This is a test function. in routes.js")
+        console.log("This console log is coming from the route.js")
+    })
+
     
-}
+// }
 
 
 module.exports = router;
