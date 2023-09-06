@@ -1,13 +1,17 @@
-const Emails = require("../controllers/emails")
 const express = require('express');
 const router = express.Router();
+const Emails = require("../controllers/emails")
 
 module.exports = function(router) {
 
-    router.post('/', (request,response)=> {
-        console.log("This console log is coming from the route.js", Emails)
-        Emails.createAuthor(request, response)
+    router.post('/', (request, response) => {
+        // response.send("This is the send email function. in routes.js")
+        console.log("This console log is coming from the route.js")
+        Emails.createEmail(request, response)
     })
+
+    
 }
+
 
 module.exports = router;

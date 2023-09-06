@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit {
   @Input() clickedHomeNavItem : any; //This is how the parent notifies the child of the data it is passing
 
   submittedEmail = {}
+  sendingEmailObservable = {}
   errors = {}
  
 
@@ -22,40 +23,13 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     console.log("The boolean value for the showNavItem:", this.clickedHomeNavItem);
     console.log("The function emitting from the parent:", this.clickedHomeNavItem);
-
-    
   }
 
-  // sendingEmailForm(){
-  //   console.log("This is the send email form in the component", this.sentEmail)
-  //     let sendingEmailObservable = this._httpClient.sendingEmailService(this.sentEmail)
-  //     sendingEmailObservable.subscribe(sentEmailData => {
-  //       console.log(sentEmailData)
-  //       this.sentEmail = sentEmailData
-  //   })
-  // }
-
-  // sendEmailButton(){
-  //       console.log("This console log means the send email button was clicked in the contact component");
-        
-
-  // }
-  // emailForm(contactForm){
-    submit(contactForm : any){
-    console.log("This is the email form component.");
-    console.log("This is the value of the date submitted via the form:", contactForm.form.value);
-    let sendingEmailObservable = this._httpService.sendingEmailService(this.submittedEmail)
-    sendingEmailObservable.subscribe(emailData => {
-      this.submittedEmail = emailData
-      console.log("The data submitted on the email form:", this.submittedEmail)
-      
-      // if(emailData["errors"]){
-      //   this.errors = emailData["errors"]
-      // }
-      // else{
-      //   console.log("This means the email form submitted succesfully, and it is currently showing the component route:", this.router.url);
-      // }
-    })
+  submittedEmailForm(){
+    console.log("This console log is from the submittedEmailForm function in the contact component.");
+    console.log("This is the value of the date submitted via the form:", this.submittedEmail);
+    this.sendingEmailObservable = this._httpService.emailService(this.submittedEmail)
+  
   }
   
 
