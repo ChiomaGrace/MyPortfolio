@@ -28,7 +28,16 @@ export class ContactComponent implements OnInit {
   submittedEmailForm(){
     console.log("This console log is from the submittedEmailForm function in the contact component.");
     console.log("This is the value of the date submitted via the form:", this.submittedEmail);
-    this.sendingEmailObservable = this._httpService.emailService(this.submittedEmail)
+    this.sendingEmailObservable = this._httpService.emailService(this.submittedEmail) 
+  }
+
+  // submittedEmailForm(){
+  //   console.log("This console log is from the submittedEmailForm function in the contact component.");
+  //   this._httpService.emailService(this.submittedEmail).subscribe((response) => {
+  //     console.log("This is the data:", response);;
+  //   }, (error) => {
+  //     console.log("Error occured:", error);
+  //   })
   
   }
   
@@ -36,4 +45,4 @@ export class ContactComponent implements OnInit {
 
 
 
-}
+

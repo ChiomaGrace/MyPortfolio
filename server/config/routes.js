@@ -4,14 +4,14 @@ const Emails = require("../controllers/emails")
 
 // module.exports = function(router) {
 
-    router.post('/', (request, response) => {
+    router.post('/sendEmail', (request, response) => {
         // response.send("This is the send email function. in routes.js")
         console.log("This console log is coming from the route.js")
         Emails.createEmail(request, response)
     })
 
-    router.post('/', (request, response) => {
-        response.send("This is a test function. in routes.js")
+    router.get('/test', (request, response) => {
+        response.send("This is a test response from routes.js")
         console.log("This console log is coming from the route.js")
     })
 

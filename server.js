@@ -35,8 +35,7 @@ var myPortfolioDatabase = mongoose.connect('mongodb+srv://ChiomaGrace:wakandafor
 app.use(bodyParser.json()); //parses jsondata
 app.use(bodyParser.urlencoded({extended: false})); //parses URL encoded data
 app.use('/', express.static('dist/my-portfolio')) // this connects/serves static files
-// app.use('/sendEmail', routes); //Note for whatever reason this outputs a middleware error so use below syntax
-app.use('/sendEmail', () => routes);
+app.use('/routes', routes);  //this invokes the routes.js file
 
 // app.get('/test', (request, response) => {
 //   response.send("This is a test GET function. in server.js")
