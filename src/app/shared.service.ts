@@ -8,12 +8,15 @@ import { HttpClient } from '@angular/common/http';
 
 export class SharedService {
 
-  constructor(private _httpClient: HttpClient) { }
-
-    sendingEmailService(submittedEmail : any){
-    console.log("This is the send email service function", submittedEmail)
-    return this._httpClient.post('/sendEmail', submittedEmail)
+  constructor(private _httpClient: HttpClient) { 
   }
+
+    emailService(submittedEmail : any){
+      console.log("This is the email service function, and the data that was just received from the contact component:", submittedEmail)
+      console.log("This is the name that was submitted:", submittedEmail.name)
+      return this._httpClient.post('/contact', submittedEmail)
+  }
+  
 
 
   // Step 3 of FormData configure the service.ts and its needed functions so any .ts file can call on the service to provide it data

@@ -1,52 +1,44 @@
-// const express = require('express'); //must require('express') before attempting to invoke it,otherwise an error 'express is not defined' will occur
-// const app = express(); //this is the function that then invokes express
-// const mongoose = require('mongoose'); //must require('mongoose') before attempting to invoke it
-// // const PORT = 6969;
-
-// app.use(express.json())
-// app.use(express.urlencoded({extended: true}))
-// app.use(express.static(__dirname + "/myPortfolio/dist/app")) // this connects stylesheets in static folder
-
-// mongoose.connect('mongodb+srv://ChiomaGrace:wakandaforever@myportfoliocluster.98iczyl.mongodb.net/') 
-// //Step 2 of FormData - Confgure serve.js with required variables and link database
-
-// // require('./server/config/routes')(app)
-// const routes = require('/Users/chioma.ubogagu.SV-NB-DEV-78/Angular/myPortfolio/src/app/server/config/routes');
-
-// app.use('/sendEmail', routes)
+const express = require('express'); //a routing and middleware (functions that have access to request/response objects) web framework that has minimal functionality of its own and is essentially a series of middleware function calls. must require('express') to use the package before attempting to invoke it,otherwise an error 'express is not defined' will occur
+const app = express(); //this is the function that then invokes express
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser'); //middleware which provides the ability to parse through incoming data/request bodies 
+const port = process.env.NODE_PORT || 3000; //the port the node server will run on
+const routes = require('./server/config/routes'); //linking the routes file
 
 
-// // // app.listen(PORT, () => {
-// // //     console.log("Listening on port")
-// // // })
+// const myPortfolioDbUrl = "mongodb+srv://ChiomaGrace:wakandaforever@myportfoliocluster.98iczyl.mongodb.net/"
 
-// app.listen(3001, () => {
-//     console.log("Listening on port")
-// })
+// async function connect(){
+//   try {
+//       await mongoose.connect(myPortfolioDbUrl);
+//       console.log("connected to MongoDB");
+//   }
+//   catch {
+//       console.log(error);
+//   }
+// }
 
-// THE BELOW WORKS!
+// connect();
 
-const express = require('express');
-const app = express();
-const path = require('path');
-const fs = require('fs');
-
-const port = process.env.NODE_PORT || 3000;
-
-const root = path.join(__dirname, 'dist', 'my-portfolio');
-
-
-app.get('*' ,function(req, res) {
-  fs.stat(root + req.path, function(err){
-    if(err){
-        res.sendFile("index.html", { root });
-    }else{
-        res.sendFile(req.path, { root });
-    }
-  })
+var myPortfolioDatabase = mongoose.connect('mongodb+srv://ChiomaGrace:wakandaforever@myportfoliocluster.98iczyl.mongodb.net/', function(error, response) {
+  if(error) {
+    console.log("This error is from the server.js file where mongoose is connecting:", error);
+  }
+  else {
+    console.log("This console log means a successful connection to" + myPortfolioDatabase, "The response:");
+    // console.log(response);
+  }
 });
 
-app.listen(port);
-console.log('Listening on port '+ port);
 
-// THE ABOVE WORKS!
+
+app.use(bodyParser.json()); //parse jsondata
+app.use(bodyParser.urlencoded({extended: false})); //parse URL encoded data
+app.use('/', express.static('dist/my-portfolio')) // this connects/serves static files
+// app.use('/sendEmail', routes); Note for whatever reason this outputs a middleware error so use below syntax
+app.use('/sendEmail', () => routes);
+
+app.listen(port, () => { //starts a port and hosts connection
+  console.log("Listening on port", port);
+
+})
