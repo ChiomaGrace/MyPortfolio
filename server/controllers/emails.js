@@ -1,12 +1,14 @@
 const {response} = require('express');
 const {Email} = require('../models/email');
-// const sharedService = require('../../shared.service')
 
-module.exports = {
-    createEmail: (request, response) => {
-        console.log("The create email function in the controller receiving the request body", request.body);
-        submittedEmail = new Email()
-        submittedEmail.name = request.body.name
+const createEmail = (request, response) => {
+    console.log("This console log is from the create email function in the controller:", request.body);
+    submittedEmail = new Email()
+        submittedEmail.firstName = request.body.firstName
+        submittedEmail.lastName = request.body.lastName
+        submittedEmail.emailAddress = request.body.emailAddress
+        submittedEmail.subject = request.body.subject
+        submittedEmail.email = request.body.email
         submittedEmail.save()
             .then(submittedEmailData => {
                 console.log("This is the .then of the create email function in the controller saving the data:", submittedEmailData);
@@ -15,24 +17,13 @@ module.exports = {
             .catch(errors => {
                 console.log("This is the .catch of the create email function in the controller, meaning saving the data errored:", errors);
                 response.json(errors)
-            })
-
-    }
+            })     
 }
 
-    //   var createEmailFunction = async (request, response) => {
-    //     try {
-    //         console.log(request.body);
-    //         var status = await sharedService.emailService(request.body);
-    //         console.log(status);
-    //         if (status) {
-    //             console.log("This means the email was created succssfully.")
-    //         } else {
-    //             console.log("This means there was an error in creating the email");
-    //         }
-    //     }
-    //     catch(error) {
-    //         console.log("Error in the catch:", error);
-    //     }
-    //   }
+// const testFunction = (request, response) => {
+//     console.log("This console log is from the test function in the controller.");
+//     return response.json("test Function")
+// }
+
+module.exports = {createEmail} 
 

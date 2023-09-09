@@ -23,15 +23,15 @@ export class AppComponent {
   showNavItems: boolean = false;
   
   constructor(  private router: Router ) {
-    console.log("This is the app component route:", this.router.url);
+    // console.log("This is the app component route:", this.router.url);
   }
 
   ngOnInit() {
   }
 
   homeNavItem() {
-    console.log("The value of all the children components after the click on the home nav item:", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showWorkComponent:", this.showWorkComponent, "showContactComponent:", this.showContactComponent);
-    console.log("As stated above, these console logs mean the home nav button was clicked. The value of all the children components should now be false.");
+    // console.log("The value of all the children components after the click on the home nav item:", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showWorkComponent:", this.showWorkComponent, "showContactComponent:", this.showContactComponent);
+    // console.log("As stated above, these console logs mean the home nav button was clicked. The value of all the children components should now be false.");
     this.showIntroSiteMapComponent = true;
     this.showWelcomeNavItem = true;
     this.showNavItems = false;
@@ -39,7 +39,7 @@ export class AppComponent {
     this.showExperienceComponent = false;
     this.showWorkComponent = false;
     this.showContactComponent = false;
-    console.log("Checking the boolean is now false", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showWorkComponent:", this.showWorkComponent, "showContactComponent:", this.showContactComponent);
+    // console.log("Checking the boolean is now false", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showWorkComponent:", this.showWorkComponent, "showContactComponent:", this.showContactComponent);
   }
 
   showHideAboutMeComponent(valueEmitted: any) {
@@ -53,7 +53,7 @@ export class AppComponent {
     this.workNavStyling = 'default-nav-styling';
     this.showContactComponent = false;
     this.contactNavStyling = 'default-nav-styling'
-    console.log("This is the showHideAboutMeComponent function in the app component AFTER the child data comes through(about me button was clicked), so the value should be true:", this.showAboutMeComponent )
+    // console.log("This is the showHideAboutMeComponent function in the app component AFTER the child data comes through(about me button was clicked), so the value should be true:", this.showAboutMeComponent )
     this.aboutMeNavStyling = 'active-nav-styling';
   }
 
@@ -66,18 +66,14 @@ export class AppComponent {
     this.workNavStyling = 'default-nav-styling';
     this.showContactComponent = false;
     this.contactNavStyling = 'default-nav-styling';
-    console.log("This means the About Me nav link was clicked on in the App  Component. The value is now:", this.showAboutMeComponent);
-    if(this.aboutMeNavStyling == 'default-nav-styling') {
-      this.aboutMeNavStyling = 'active-nav-styling';
-    } else {
-      this.aboutMeNavStyling = 'default-nav-styling';
-    }
+    // console.log("This means the About Me nav link was clicked on in the App  Component. The value is now:", this.showAboutMeComponent);
+    this.aboutMeNavStyling = 'active-nav-styling';
   }
 
   showHideExperienceComponent(valueEmitted: any) {
     this.showExperienceComponent = valueEmitted;
     this.showNavItems = true;
-    console.log("This is the showHideExperienceComponent function in the app component AFTER the child data comes through(experience button was clicked), so the value should be true:", this.showExperienceComponent )
+    // console.log("This is the showHideExperienceComponent function in the app component AFTER the child data comes through(experience button was clicked), so the value should be true:", this.showExperienceComponent )
     this.showIntroSiteMapComponent = false;
     this.showWelcomeNavItem = false;
     this.showAboutMeComponent = false;
@@ -86,7 +82,7 @@ export class AppComponent {
     this.workNavStyling = 'default-nav-styling';
     this.showContactComponent = false;
     this.contactNavStyling = 'default-nav-styling'
-    console.log("This console log makes sure the other components are set to be hidden.", "introSiteMapComponent:", this.showIntroSiteMapComponent, "aboutMeComponent:", this.showAboutMeComponent,"showWorkComponent:", this.showWorkComponent, "showContactComponent:", this.showContactComponent);
+    // console.log("This console log makes sure the other components are set to be hidden.", "introSiteMapComponent:", this.showIntroSiteMapComponent, "aboutMeComponent:", this.showAboutMeComponent,"showWorkComponent:", this.showWorkComponent, "showContactComponent:", this.showContactComponent);
     this.experienceNavStyling = 'active-nav-styling';
   }
 
@@ -99,18 +95,14 @@ export class AppComponent {
     this.workNavStyling = 'default-nav-styling';
     this.showContactComponent = false;
     this.contactNavStyling = 'default-nav-styling';
-    console.log("This means the Experience nav link was clicked on in the App  Component. The value is now:", this.showExperienceComponent);
-    if(this.experienceNavStyling == 'default-nav-styling') {
-      this.experienceNavStyling = 'active-nav-styling';
-    } else {
-      this.experienceNavStyling = 'default-nav-styling';
-    }
+    // console.log("This means the Experience nav link was clicked on in the App  Component. The value is now:", this.showExperienceComponent);
+    this.experienceNavStyling = 'active-nav-styling';
   }
 
   showHideWorkComponent(valueEmitted: any) {
     this.showWorkComponent = valueEmitted;
     this.showNavItems = true;
-    console.log("This is the showHideWorkComponent function in the app component AFTER the child data comes through(work button was clicked), so the value should be true:", this.showWorkComponent )
+    // console.log("This is the showHideWorkComponent function in the app component AFTER the child data comes through(work button was clicked), so the value should be true:", this.showWorkComponent )
     this.showIntroSiteMapComponent = false;
     this.showWelcomeNavItem = false;
     this.showAboutMeComponent = false;
@@ -119,7 +111,7 @@ export class AppComponent {
     this.experienceNavStyling = 'default-nav-styling';
     this.showContactComponent = false;
     this.contactNavStyling = 'default-nav-styling'
-    console.log("This console log makes sure the other components are set to be hidden.", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showContactComponent:", this.showContactComponent);
+    // console.log("This console log makes sure the other components are set to be hidden.", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showContactComponent:", this.showContactComponent);
     this.workNavStyling = 'active-nav-styling';
   }
 
@@ -132,7 +124,7 @@ export class AppComponent {
     this.experienceNavStyling = 'default-nav-styling';
     this.showContactComponent = false;
     this.contactNavStyling = 'default-nav-styling';
-    console.log("This means the Work nav link was clicked on in the App Component. The value is now:", this.showWorkComponent);
+    // console.log("This means the Work nav link was clicked on in the App Component. The value is now:", this.showWorkComponent);
     if(this.workNavStyling = 'default-nav-styling') {
       this.workNavStyling = 'active-nav-styling';
     } else {
@@ -143,7 +135,7 @@ export class AppComponent {
   showHideContactComponent(valueEmitted: any) {
     this.showContactComponent = valueEmitted;
     this.showNavItems = true;
-    console.log("This is the showHideContactComponent function in the app component AFTER the child data comes through(work button was clicked), so the value should be true:", this.showWorkComponent )
+    // console.log("This is the showHideContactComponent function in the app component AFTER the child data comes through(work button was clicked), so the value should be true:", this.showWorkComponent )
     this.showWelcomeNavItem = false;
     this.showIntroSiteMapComponent = false;
     this.showAboutMeComponent = false;
@@ -152,7 +144,7 @@ export class AppComponent {
     this.experienceNavStyling = 'default-nav-styling';
     this.showWorkComponent = false;
     this.workNavStyling = 'default-nav-styling';
-    console.log("This console log makes sure the other components are set to be hidden.", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showWorkComponent:", this.showWorkComponent);
+    // console.log("This console log makes sure the other components are set to be hidden.", "aboutMeComponent:", this.showAboutMeComponent, "showExperienceComponent:", this.showExperienceComponent, "showWorkComponent:", this.showWorkComponent);
     this.contactNavStyling = 'active-nav-styling';
   }
 
@@ -165,7 +157,7 @@ export class AppComponent {
     this.experienceNavStyling = 'default-nav-styling';
     this.showWorkComponent = false;
     this.workNavStyling = 'default-nav-styling';
-    console.log("This means the Contact nav link was clicked on in the App Component. The value is now:", this.showContactComponent);
+    // console.log("This means the Contact nav link was clicked on in the App Component. The value is now:", this.showContactComponent);
     if(this.contactNavStyling = 'default-nav-styling') {
       this.contactNavStyling = 'active-nav-styling';
     } else {

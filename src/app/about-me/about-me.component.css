@@ -5,7 +5,8 @@
     align-content: flex-start;
     height: 100%;
     overflow: hidden;
-    overflow-y: scroll;
+    /* overflow: auto; */
+    /* overflow-y: scroll; */
 }
 
 .about-me-wrapper .column:first-child {

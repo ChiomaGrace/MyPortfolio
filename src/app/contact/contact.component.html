@@ -1,39 +1,63 @@
-<!-- <p>contact works!</p> -->
-
-
-<!-- <form #contactForm ="ngForm" (ngSubmit)="submit(contactForm)" >
-    <p style="background-color: red;"> {{submittedEmail | json }}</p>
-    <input type="text" class="form-control" name="name" ngModel>
-    <button type="submit"> Send Email</button>
-</form> -->
-
-<!-- <form [formGroup] ="contactForm" (ngSubmit)="saveEmail(contactForm.value)" >
-    <p style="background-color: red;"> {{submittedEmail | json }}</p>
-    <input type="text" formControlName="name" class="form-control" required >
-    <button type="submit"> Send Email</button>
-</form> -->
-
-<form (submit) = "submittedEmailForm()">
-    <div class="form-group">
-        <!-- <div *ngIf="errors.name">
-            <p> {{errors.name.message}}</p>
-        </div> -->
-        <label for="name">Name</label>
-        <!-- <input type="text" class="form-control" name="name" [(ngModel)]="submittedEmail.name"> -->
-        <input type="text" class="form-control" name="name" [(ngModel)]="submittedEmail">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
 <div class="contact-wrapper">
     <h1 class="title">Contact</h1>
     <div class="iphone">
         <div class="screen">
+            <div class="display-settings">
+                <div class="clock-container">
+                <p class="clock">{{currentTime}}</p>
+                </div>
+                <div class="general-settings-container">
+                    <i class="fa-solid fa-signal"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-three-quarters"></i>
+                </div>
+            </div>
             <div class="notch">
                 <div class="camera"></div>
                 <div class="speaker"></div>
             </div>
+            <div class="email-form-errors" *ngIf="hasEmailFormErrors">
+                <span>{{emailFormErrors.errors.firstName.message}}</span>
+                <span>{{emailFormErrors.errors.lastName.message}}</span>
+                <span>{{emailFormErrors.errors.emailAddress.message}}</span>
+                <span>{{emailFormErrors.errors.email.message}}</span>
+            </div>
+            <form (submit) = "submittedEmailForm()">
+                <div class="email-template">
+                    <a class="cancel-text">Cancel</a>
+                    <div class="email-title-section">
+                        <input class="email-title" placeholder="New Message" type="text">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa-solid fa-circle-arrow-up"></i>
+                        </button>
+                    </div>
+                    <table class="email-composition">
+                        <tr>
+                            <th class="recipient-label">To:</th>
+                            <td class="recipient">Chioma Ubogagu</td>
+                        </tr>
+                        <tr>
+                            <th class="author-label">From:</th>
+                            <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.firstName.message != undefined}">
+                                <input placeholder="First Name" type="text"  [(ngModel)]="submittedEmail.firstName">
+                            </td>
+                            <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.lastName.message}">
+                                <input placeholder="Last Name" type="text"  [(ngModel)]="submittedEmail.lastName" >
+                            </td>
+                            <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.email.message}">
+                                <input placeholder="Email Address" type="text"  [(ngModel)]="submittedEmail.emailAddress">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="subject-label">Subject:</th>
+                            <td class="subject">
+                                <input placeholder="Optional" type="text"  [(ngModel)]="submittedEmail.subject">
+                            </td>
+                        </tr>
+                    </table>
+                    <textarea class="email-content" [ngClass]="{errorStyling: emailFormErrors.errors.email.message}" placeholder="Let's connect!" type="textarea"  [(ngModel)]="submittedEmail.email"></textarea>
+                </div>
+            </form>
         </div>
-        <p>testing</p>
     </div>
 </div>

@@ -48,25 +48,25 @@ export class IntroSitemapComponent implements OnInit {
 
   showAboutMe() {
     this.clickedAboutMeButton = true;
-    console.log("This means the About Me Widget was clicked on in the Into Sitemap Component. The value is now:", this.clickedAboutMeButton);
+    // console.log("This means the About Me Widget was clicked on in the Into Sitemap Component. The value is now:", this.clickedAboutMeButton);
     this.aboutMeEvent.emit(this.clickedAboutMeButton); //This then binds with the related function in the app component html so the app component has the data needed
   }
 
   showExperience() {
     this.clickedExperienceButton = true;
-    console.log("This means the Experience Widget was clicked on in the Into Sitemap Component. The value is now:", this.clickedExperienceButton);
+    // console.log("This means the Experience Widget was clicked on in the Into Sitemap Component. The value is now:", this.clickedExperienceButton);
     this.experienceEvent.emit(this.clickedExperienceButton);
   }
 
   showWork() {
     this.clickedWorkButton = true;
-    console.log("This means the Work Widget was clicked on in the Into Sitemap Component. The value is now:", this.clickedWorkButton);
+    // console.log("This means the Work Widget was clicked on in the Into Sitemap Component. The value is now:", this.clickedWorkButton);
     this.workEvent.emit(this.clickedWorkButton); 
   }
 
   showContact() {
     this.clickedContactButton = true;
-    console.log("This means the Contact Widget was clicked on in the Into Sitemap Component. The value is now:", this.clickedContactButton);
+    // console.log("This means the Contact Widget was clicked on in the Into Sitemap Component. The value is now:", this.clickedContactButton);
     this.contactEvent.emit(this.clickedContactButton);
   }
 

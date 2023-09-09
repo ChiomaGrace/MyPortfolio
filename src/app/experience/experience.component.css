@@ -4,8 +4,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
-    height: 100%;
-    overflow-x: hidden;
+    height: 100%; /* to get the scrollbar to take up whole height/where the window-tabs are to the footer */
+    /* overflow-x: hidden; */
     overflow-y: scroll;
 }
 
@@ -13,6 +13,7 @@
     display: block;
     color: var(--blurple);
     margin-bottom: 20px;
+    /* margin-top: 30px; */
 }
 
 .experience-wrapper .projects {

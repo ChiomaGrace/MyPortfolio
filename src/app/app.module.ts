@@ -9,12 +9,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { WorkComponent } from './work/work.component';
 import { ContactComponent } from './contact/contact.component';
 
-
-// import {HttpService} from './http.service'; //added this manually because only components get added automatically. This is part of Angular that serves as the model. It will then pass the data to the controller in the component.ts
 import{FormsModule, ReactiveFormsModule} from '@angular/forms'; //added this manually in order to use forms
 import {HttpClientModule} from '@angular/common/http' //added this manually because it provides functionality to perform HTTP requests and manipulate said requests and their responses
-import { HttpClient } from '@angular/common/http';
-// import {HttpService} from './http.service' //added this
 import {SharedService} from 'src/app/shared.service' //added this
 
 

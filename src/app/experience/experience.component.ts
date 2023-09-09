@@ -12,7 +12,7 @@ export class ExperienceComponent implements OnInit {
   @Input() clickedHomeNavItem : any;
   
   constructor(  private router: Router ) {
-    console.log("This is the about me console log showing which route is currently being visited:", this.router.url);
+    // console.log("This is the about me console log showing which route is currently being visited:", this.router.url);
   }
 
   ngOnInit() {

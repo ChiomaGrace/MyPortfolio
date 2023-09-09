@@ -4,7 +4,7 @@
     justify-items: center;
     height: 100%;
     overflow: hidden;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .work-wrapper .title {

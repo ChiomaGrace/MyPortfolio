@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { lastValueFrom } from 'rxjs';
+
 
 
 @Injectable({
@@ -12,16 +14,17 @@ export class SharedService {
   }
 
     emailService(submittedEmail : any){
-      console.log("This is the email service function, and the data that was just received from the contact component:", submittedEmail)
-      console.log("This is the name that was submitted:", submittedEmail.name)
-      return this._httpClient.post('/routes/sendEmail', submittedEmail).subscribe();
+      // console.log("This console log is from the shared.service.ts. It is from the emailService function which is making the request to the server (expresss)");
+      // console.log("This console log is from the shared.service.ts. It is from the emailService function which is returning a response from the form in the contact component:, submittedEmail");
+      // console.log("This is all the data that was submitted from the form:", submittedEmail);
+      return this._httpClient.post('/sendEmail', submittedEmail) //works but need to get mongoose errors
   }
 
-  testService() {
-    console.log("This is a console log from the test service function in the shared service file");
-    return this._httpClient.get('/routes/test');
 
-  }
+  // testService() {
+  //   console.log("This is a console log from the test service function in the shared service file");
+  //   return this._httpClient.get('/');
+  // }
   
 
 

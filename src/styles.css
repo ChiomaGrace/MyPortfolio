@@ -91,7 +91,6 @@ a {
     font-size: 14px;
     padding: 6px;
     color: white;
-    cursor: pointer;
 }
 
 .container .menu-bar .column .fa-window-minimize {
@@ -121,6 +120,10 @@ a {
     cursor: pointer;
 }
 
+.container .page .side-bar i:nth-child(5), .container .page .side-bar i:nth-child(6) {
+    cursor: default;
+}
+
 .container .page .side-bar .fa-github:hover, .container .page .side-bar .fa-envelope:hover, .container .page .side-bar .fa-linkedin:hover, .container .page .side-bar .fa-youtube:hover {
     color: var(--purple);
 }
@@ -137,14 +140,17 @@ a {
 
 .container .page .content .window-bar {
     background-color: #2C2C32;
-    height: 32px;
+    /* border-bottom:  solid 2px #2C2C32; */
+    /* height: 32px; */
+    /* height: 24px; */
     display: flex;
     overflow: auto;
 }
 
 .container .page .content .window-bar .windowTab {
     background-color: #1F1F1F;
-    height: 32px;
+    /* height: 32px; */
+    height: 24px;
     width: 90px;
     display: flex;
     justify-content: center;   
@@ -223,12 +229,20 @@ a {
     align-items: center;
 }
 
+/* @media (min-width: 375px) {
+    .container .page .content .window-bar {
+        height: 24px;
+    }
+} */
+
+
 /* The below is a media query for tablet size */
 
 @media (min-width: 641px) {
 
     .container .page .content .window-bar {
         overflow: hidden;
+        height: 24px;
     }
     
     .container .page .content .window-bar .windowTab {

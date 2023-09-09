@@ -12,12 +12,12 @@ export class AboutMeComponent implements OnInit {
   @Input() clickedHomeNavItem : any; //This is how the parent notifies the child of the data it is passing
 
   constructor(  private router: Router ) {
-    console.log("This is the about me console log showing which route is currently being visited:", this.router.url);
+    // console.log("This is the about me console log showing which route is currently being visited:", this.router.url);
   }
   
   ngOnInit() {
-    console.log("The boolean value for the showNavItem:", this.clickedHomeNavItem);
-    console.log("The function emitting from the parent:", this.clickedHomeNavItem);
+    // console.log("The boolean value for the showNavItem:", this.clickedHomeNavItem);
+    // console.log("The function emitting from the parent:", this.clickedHomeNavItem);
 
   }
 
@@ -40,25 +40,25 @@ export class AboutMeComponent implements OnInit {
 
   showCurrentSlide(index: number): void {
     this.selectedIndex = index;
-    console.log("This is the slide number:", this.selectedIndex);
+    // console.log("This is the slide number:", this.selectedIndex);
   }
   
   goToNext(): void {
     console.log("This is the goToNext function")
     if(this.selectedIndex === this.slideContent.length - 1) {
-      console.log("This console log means we have reached the last slide.");
-      console.log("This is the last slide index:", this.selectedIndex);
+      // console.log("This console log means we have reached the last slide.");
+      // console.log("This is the last slide index:", this.selectedIndex);
     } else {
       this.selectedIndex++;
-      console.log("Slide index number:", this.selectedIndex)
+      // console.log("Slide index number:", this.selectedIndex)
     }
   }
 
   goToPrev(): void {
-    console.log("This is the goToPrev function");
-    console.log("This is the current position:", this.slideContent.length);
+    // console.log("This is the goToPrev function");
+    // console.log("This is the current position:", this.slideContent.length);
     if(this.selectedIndex === 0) {
-      console.log("This is at the first content slide.")
+      // console.log("This is at the first content slide.")
       this.selectedIndex === this.slideContent.length - 1;
     } else {
       this.selectedIndex--;
