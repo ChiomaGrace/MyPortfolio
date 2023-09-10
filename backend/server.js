@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000; //changed for deployment
 const routes = require('./server/config/routes'); //linking the routes file
 
 
-var myPortfolioDatabase = mongoose.connect('process.env.MONGO_URL', function(error, response) { //process.env.MONGO_URL is the variable created in railway deployment for my service. otherwise monngo db url from atlas can go there for local testing
+var myPortfolioDatabase = mongoose.connect(process.env.MONGO_URL, function(error, response) { //process.env.MONGO_URL is the variable created in railway deployment for my service. otherwise monngo db url from atlas can go there for local testing
   if(error) {
     console.log("This error is from the server.js file where mongoose is connecting:", error);
   }
