@@ -20,7 +20,7 @@ var myPortfolioDatabase = mongoose.connect(process.env.MONGO_URL, function(error
 
 app.use(express.json()); // middleware that parses incoming requests with JSON payloads (HTTP post, put, patch requests) and is based on body-parser aka so you can see/work with form data
 app.use(express.urlencoded()); // middleware that parses incoming requests with URL-ecnoded payloads (HTTP post, put, patch requests) and is based on body-parser aka so you can see/work with form data
-// app.use('/', express.static('dist/my-portfolio')) // this connects/serves static files locally not needed for deployment
+// app.use('/', express.static('dist/my-portfolio')) // this connects/serves static files locally not needed for after deployment. can use npm run dev then
 app.use('/', routes);  //this invokes the routes.js file
 
 app.listen(port, () => { //starts a port and hosts connection
