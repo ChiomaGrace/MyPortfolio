@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router(); //links the route call on the server.js
 const emailController = require("../controllers/emails"); //links the email controller which has all the functions
+import { environment } from '../environments/environment';
 
-    router.post('/sendEmail', emailController.createEmail);
+
+    // router.post('/sendEmail', emailController.createEmail); 
+
+    router.post(environment.backendURL + '/sendEmail' , emailController.createEmail); environment
 
     router.get('/test', (request, response) => {
         response.send("This is a test response from routes.js")

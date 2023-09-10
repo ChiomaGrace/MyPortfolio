@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, isDevMode } from '@angular/core';
 import {Router} from '@angular/router';
 
 
@@ -27,6 +27,11 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    if (isDevMode()) {
+      console.log('Development!');
+    } else {
+      console.log('Production!');
+    }
   }
 
   homeNavItem() {
