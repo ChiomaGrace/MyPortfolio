@@ -13,8 +13,6 @@ import{FormsModule, ReactiveFormsModule} from '@angular/forms'; //added this man
 import {HttpClientModule} from '@angular/common/http' //added this manually because it provides functionality to perform HTTP requests and manipulate said requests and their responses
 import {SharedService} from 'src/app/shared.service' //added this
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
