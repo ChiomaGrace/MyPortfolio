@@ -39,23 +39,23 @@
                         <tr>
                             <th class="author-label">From:</th>
                             <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.firstName.message != undefined}">
-                                <input placeholder="First Name" type="text"  [(ngModel)]="submittedEmail.firstName">
+                                <input placeholder="First Name" type="text" name="firstName" [(ngModel)]="submittedEmail.firstName">
                             </td>
                             <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.lastName.message}">
-                                <input placeholder="Last Name" type="text"  [(ngModel)]="submittedEmail.lastName" >
+                                <input placeholder="Last Name" type="text" name="lastName" [(ngModel)]="submittedEmail.lastName" >
                             </td>
                             <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.email.message}">
-                                <input placeholder="Email Address" type="text"  [(ngModel)]="submittedEmail.emailAddress">
+                                <input placeholder="Email Address" type="text" name="emailAddress" [(ngModel)]="submittedEmail.emailAddress">
                             </td>
                         </tr>
                         <tr>
                             <th class="subject-label">Subject:</th>
                             <td class="subject">
-                                <input placeholder="Optional" type="text"  [(ngModel)]="submittedEmail.subject">
+                                <input placeholder="Optional" type="text" name="subject" [(ngModel)]="submittedEmail.subject">
                             </td>
                         </tr>
                     </table>
-                    <textarea class="email-content" [ngClass]="{errorStyling: emailFormErrors.errors.email.message}" placeholder="Let's connect!" type="textarea"  [(ngModel)]="submittedEmail.email"></textarea>
+                    <textarea class="email-content" name="email" [ngClass]="{errorStyling: emailFormErrors.errors.email.message}" placeholder="Let's connect!" type="textarea"  [(ngModel)]="submittedEmail.email"></textarea>
                 </div>
             </form>
         </div>
