@@ -38,7 +38,7 @@
 .contact-wrapper .iphone .screen .display-settings {
     display: flex;
     flex-direction: row;
-    font-size: 10px;
+    font-size: 8px;
     color: white;
     background-color: rgba(11, 10, 10, 0.92);
 }
@@ -55,7 +55,7 @@
 
 .contact-wrapper .iphone .screen .display-settings .general-settings-container i {
     margin: 0px 4px;
-    font-size: 10px;
+    font-size: 8px;
 }
 
 .contact-wrapper .iphone .screen .notch {
@@ -180,8 +180,8 @@
  }
 
  .contact-wrapper .iphone .email-template .email-composition tr:nth-child(2) td {
-    overflow: hidden;
-    font-size: 7px;
+    font-size: 3px;
+    margin-top: 3px;
  } 
 
  .contact-wrapper .iphone .email-template .email-composition tr:nth-child(2) td:nth-child(2), .contact-wrapper .iphone .email-template .email-composition tr:nth-child(2) td:nth-child(3),  .contact-wrapper .iphone .email-template .email-composition tr:nth-child(2) td:nth-child(4) {
@@ -195,7 +195,11 @@
     position: relative;
     margin-right: 4px;
     top: 5px;
- }
+}
+
+.contact-wrapper .iphone .email-template .email-composition .author {
+    flex: 1;
+ } 
 
  .contact-wrapper .iphone .email-template .email-composition .recipient {
     /* display: inline-block; */
@@ -213,11 +217,6 @@
     border: .2px solid red;
  }
 
- .contact-wrapper .iphone .email-template .email-composition .successStyling {
-    border: transparent;
-    background-color: red;
- }
-
  .contact-wrapper .iphone .email-template .email-composition .errorStyling input::placeholder {
     color: red;
  }
@@ -233,8 +232,6 @@
  .contact-wrapper .iphone .email-template .email-composition .author input, .contact-wrapper .iphone .email-template .email-composition .subject input, .contact-wrapper .iphone .email-template .email-content input {
     all: unset;
     cursor: pointer;
-    color: black;
-    padding-right: 54px;
 }
 
 .contact-wrapper .iphone .email-template .email-content-div {
@@ -303,7 +300,6 @@
  
      }
     
-    
     .contact-wrapper .iphone .email-template .email-composition tr:nth-child(2) td {
         font-size: 10px;
      } 
@@ -339,18 +335,27 @@
         left: 105px;
     }
 
+    .contact-wrapper .iphone .screen .display-settings, .contact-wrapper .iphone .screen .display-settings .general-settings-container i {
+        font-size: 10px;
+    }
+
+    .contact-wrapper .iphone .email-template .email-composition tr:nth-child(2) td {
+        overflow: hidden;
+        font-size: 7px;
+     } 
+
     .contact-wrapper .iphone .screen .email-form-errors span {
         color: red;
         font-size: 11px;
     }
 
-    .contact-wrapper .iphone .email-template .email-composition .author input, .contact-wrapper .iphone .email-template .email-composition .subject input, .contact-wrapper .iphone .email-template .email-content input {
+    .contact-wrapper .iphone .email-template .email-composition .author {
         padding-right: 0px;
     }
 }
 
 @media (min-width: 1024px) {
     .contact-wrapper .iphone .screen .notch {
-        height: 13px;
+        height: 10px;
     }
 }
