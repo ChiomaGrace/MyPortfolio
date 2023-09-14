@@ -31,6 +31,10 @@ export class ContactComponent implements OnInit {
   today= new Date();
 
   currentTime = "";
+
+  hasSubmittedSuccessfully = false;
+
+  successMessage : any;
  
 
   constructor(  private router: Router, private _httpService: SharedService,  ) {
@@ -59,7 +63,9 @@ export class ContactComponent implements OnInit {
       }
       else {
         // console.log("This console log means the email form submitted succesfully.");
-        this.hasEmailFormErrors=false;
+        this.hasSubmittedSuccessfully = true;
+        this.successMessage = "Email sent successfully!"
+        this.hasEmailFormErrors = false;
       }
     })
   }

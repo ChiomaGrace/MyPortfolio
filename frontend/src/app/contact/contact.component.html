@@ -38,24 +38,40 @@
                         </tr>
                         <tr>
                             <th class="author-label">From:</th>
-                            <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.firstName.message != undefined}">
+                            <td class="author" [ngClass]="{errorStyling : emailFormErrors.errors.firstName.message != undefined, successStyling : hasSubmittedSuccessfully}">
                                 <input placeholder="First Name" type="text" name="firstName" size="24" [(ngModel)]="submittedEmail.firstName">
                             </td>
-                            <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.lastName.message}">
+                            <td class="author" *ngIf="hasSubmittedSuccessfully">
+                                <input placeholder="{{submittedEmail.firstName}}">
+                            </td>
+                            <td class="author" [ngClass]="{errorStyling : emailFormErrors.errors.lastName.message != undefined, successStyling : hasSubmittedSuccessfully}">
                                 <input placeholder="Last Name" type="text" name="lastName" size="24" [(ngModel)]="submittedEmail.lastName" >
                             </td>
-                            <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.email.message}">
+                            <td class="author" *ngIf="hasSubmittedSuccessfully">
+                                <input placeholder="{{submittedEmail.lastName}}">
+                            </td>
+                            <td class="author" [ngClass]="{errorStyling : emailFormErrors.errors.emailAddress.message != undefined, successStyling : hasSubmittedSuccessfully}">
                                 <input placeholder="Email Address" type="text" name="emailAddress" size="24" [(ngModel)]="submittedEmail.emailAddress">
+                            </td>
+                            <td class="author" *ngIf="hasSubmittedSuccessfully">
+                                <input placeholder="{{submittedEmail.emailAddress}}">
                             </td>
                         </tr>
                         <tr>
                             <th class="subject-label">Subject:</th>
-                            <td class="subject">
+                            <td class="subject" [ngClass]="{ successStyling : hasSubmittedSuccessfully}">
                                 <input placeholder="Optional" type="text" name="subject" [(ngModel)]="submittedEmail.subject">
+                            </td>
+                            <td class="author" *ngIf="hasSubmittedSuccessfully">
+                                <input placeholder="{{submittedEmail.subject}}">
                             </td>
                         </tr>
                     </table>
-                    <textarea class="email-content" name="email" [ngClass]="{errorStyling: emailFormErrors.errors.email.message}" placeholder="Let's connect!" type="textarea"  [(ngModel)]="submittedEmail.email"></textarea>
+                    <p>{{successMessage}}</p>
+                    <div class="email-content-div" [ngClass]="{successStyling: hasSubmittedSuccessfully}">
+                        <textarea class="email-content" placeholder="Let's connect!" [ngClass]="{errorStyling: emailFormErrors.errors.email.message}" [(ngModel)]="submittedEmail.email" name="email" ></textarea>
+
+                    </div>
                 </div>
             </form>
         </div>

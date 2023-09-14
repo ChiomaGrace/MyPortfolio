@@ -213,6 +213,19 @@
     border: .2px solid red;
  }
 
+ .contact-wrapper .iphone .email-template .email-composition .successStyling {
+    border: transparent;
+    background-color: red;
+ }
+
+ .contact-wrapper .iphone .email-template .email-composition .errorStyling input::placeholder {
+    color: red;
+ }
+
+ .contact-wrapper .iphone .email-template .email-composition .successStyling input::placeholder {
+    color: lightgray;
+ }
+
  .contact-wrapper .iphone .email-template .email-composition .author:nth-child(3){
     margin: 0px 2px;
  } 
@@ -221,6 +234,20 @@
     all: unset;
     cursor: pointer;
     color: black;
+    padding-right: 54px;
+}
+
+.contact-wrapper .iphone .email-template .email-content-div {
+    display: flex;
+    flex: 1;
+}
+
+.contact-wrapper .iphone .email-template .email-content-div .errorStyling::placeholder {
+    color: red;
+}
+
+.contact-wrapper .iphone .email-template .successStyling {
+    display: none;
 }
 
 .contact-wrapper .iphone .email-template .email-content {
@@ -233,15 +260,6 @@
     color: black;
 }
 
-.contact-wrapper .iphone .email-template .errorStyling::placeholder {
-    color: red;
-}
-
-.contact-wrapper .iphone .email-template .email-content input {
-    display: flex;
-    background-color: pink;
- }
-
 @media (min-width: 375px) {
 
     .contact-wrapper .title {
@@ -249,8 +267,10 @@
     }
 
     .contact-wrapper .iphone {
-        width: 228px;
-        height: 497px;
+        /* width: 228px; */
+        width: 220px;
+        /* height: 497px; */
+        height: 480px;
         bottom: 50px;
     }
     
@@ -322,6 +342,10 @@
     .contact-wrapper .iphone .screen .email-form-errors span {
         color: red;
         font-size: 11px;
+    }
+
+    .contact-wrapper .iphone .email-template .email-composition .author input, .contact-wrapper .iphone .email-template .email-composition .subject input, .contact-wrapper .iphone .email-template .email-content input {
+        padding-right: 0px;
     }
 }
 
