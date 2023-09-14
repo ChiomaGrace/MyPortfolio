@@ -5,7 +5,6 @@
     height: 100%;
     /* overflow: hidden; */
     overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 .contact-wrapper .title {
@@ -67,10 +66,12 @@
     justify-content: flex-start;
     top: 0;
     /* left: 50px; */
-    left: 56px;
+    /* left: 56px; */
+    left: 63px;
+    width: 70px;
     background-color: black;
     /* width: 100px; */
-    width: 80px;
+    /* width: 80px; */
     /* height: 15px; */
     height: 11px;
     border-radius: 0px 0px 20px 20px;
@@ -254,7 +255,8 @@
     }
     
     .contact-wrapper .iphone .screen .notch {
-        width: 124px;
+        /* width: 124px; */
+        width: 90px;
         left: 63px;
     }
 
@@ -297,7 +299,8 @@
     }
     
     .contact-wrapper .iphone .screen .notch {
-        left: 76px;
+        /* left: 76px; */
+        left: 92px;
     }
 }
 
@@ -313,7 +316,7 @@
     }
     
     .contact-wrapper .iphone .screen .notch {
-        left: 86px;
+        left: 105px;
     }
 
     .contact-wrapper .iphone .screen .email-form-errors span {
@@ -324,7 +327,6 @@
 
 @media (min-width: 1024px) {
     .contact-wrapper .iphone .screen .notch {
-        left: 80px;
         height: 13px;
     }
 }

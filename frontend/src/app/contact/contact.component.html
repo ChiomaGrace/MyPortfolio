@@ -39,13 +39,13 @@
                         <tr>
                             <th class="author-label">From:</th>
                             <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.firstName.message != undefined}">
-                                <input placeholder="First Name" type="text" name="firstName" [(ngModel)]="submittedEmail.firstName">
+                                <input placeholder="First Name" type="text" name="firstName" size="24" [(ngModel)]="submittedEmail.firstName">
                             </td>
                             <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.lastName.message}">
-                                <input placeholder="Last Name" type="text" name="lastName" [(ngModel)]="submittedEmail.lastName" >
+                                <input placeholder="Last Name" type="text" name="lastName" size="24" [(ngModel)]="submittedEmail.lastName" >
                             </td>
                             <td class="author" [ngClass]="{errorStyling: emailFormErrors.errors.email.message}">
-                                <input placeholder="Email Address" type="text" name="emailAddress" [(ngModel)]="submittedEmail.emailAddress">
+                                <input placeholder="Email Address" type="text" name="emailAddress" size="24" [(ngModel)]="submittedEmail.emailAddress">
                             </td>
                         </tr>
                         <tr>

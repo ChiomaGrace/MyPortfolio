@@ -71,14 +71,16 @@
 
 .experience-wrapper .projects .project .video-wrapper .project-info .project-title {
     display: block;
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 18px;
     font-weight: bold;
     -webkit-text-stroke: 1px white; 
     margin-bottom: 4px;
 }
 
 .experience-wrapper .projects .project .video-wrapper .project-info .project-button {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 7px;
     margin-left: 8px;
     padding: 4px;
     font-weight: bolder;
@@ -99,7 +101,8 @@
 }
 
 .experience-wrapper .projects .project .video-wrapper .project-info .project-description {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 7px;
     font-style: oblique;
     margin-top: 6px;
 }
@@ -225,6 +228,18 @@
     .experience-wrapper .projects .project .video-wrapper .collegebook-video {
         display: block;
         height: 310px;
+    }
+
+    .experience-wrapper .projects .project .video-wrapper .project-info .project-title {
+        font-size: 20px;
+    }
+
+    .experience-wrapper .projects .project .video-wrapper .project-info .project-button {
+        font-size: 12px;
+    }
+
+    .experience-wrapper .projects .project .video-wrapper .project-info .project-description {
+        font-size: 12px;
     }
 
     .experience-wrapper .skills-section {
