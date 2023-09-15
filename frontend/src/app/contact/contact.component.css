@@ -5,6 +5,7 @@
     height: 100%;
     /* overflow: hidden; */
     overflow-x: hidden;
+    font-family: cursive;
 }
 
 .contact-wrapper .title {
@@ -311,7 +312,7 @@
 
 @media (min-width: 425px) {
 
-    .contact-wrapper .title {
+        .contact-wrapper .title {
         margin-bottom: 0px;
     }
 
@@ -361,6 +362,12 @@
 }
 
 @media (min-width: 1024px) {
+
+    .contact-wrapper .iphone {
+        width: 256px;
+        height: 560px;
+    }
+
     .contact-wrapper .iphone .screen .notch {
         height: 10px;
     }

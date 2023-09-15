@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     /* background-color: #1F1F1F; */
     background-color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: cursive;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -75,7 +75,7 @@ a {
 }
 
 .container .menu-bar .column .menu-bar-title {
-    font-size: 12px;
+    font-size: 10px;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -241,7 +241,7 @@ a {
 .container .status-bar p {
     display: inline-block;
     color: white;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .container .status-bar .fa-smile{

@@ -6,6 +6,7 @@
     height: 100%;
     overflow-x:  hidden;
     overflow-y: scroll;
+    font-family: cursive;
 }
 
 .about-me-wrapper .column:first-child {
@@ -37,8 +38,9 @@
     display: block;
     padding: 0px 40px;
     text-align: left;
-    color: var(--slate);
-    font-size: 14px;
+    /* color: var(--slate); */
+    color: black;
+    font-size: 12px;
 }
 
 .about-me-wrapper .slider .dots-container {
@@ -401,8 +403,8 @@
         flex-basis: 50%;
     }
 
-    .about-me-wrapper .slider .slide-content .slide-text {
-        font-size: 22px;
+    .about-me-wrapper .slider .slide-content .slide-text.slide-active {
+        font-size: 16px;
     }
 
     .about-me-wrapper .column:last-child {

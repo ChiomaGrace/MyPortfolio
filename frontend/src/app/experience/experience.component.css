@@ -7,6 +7,7 @@
     height: 100%; /* to get the scrollbar to take up whole height/where the window-tabs are to the footer */
     /* overflow-x: hidden; */
     overflow-y: scroll;
+    font-family: cursive;
 }
 
 .experience-wrapper .heading {
@@ -102,7 +103,7 @@
 
 .experience-wrapper .projects .project .video-wrapper .project-info .project-description {
     /* font-size: 12px; */
-    font-size: 7px;
+    font-size: 5px;
     font-style: oblique;
     margin-top: 6px;
 }
@@ -143,6 +144,7 @@
     border: solid 4px var(--blurple);
     width: 90%;
     text-align: center;
+    font-size: 12px;
     margin-bottom: 10px;
     /* background-color: var(--slate); */
     color: black
