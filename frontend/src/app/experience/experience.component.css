@@ -73,7 +73,7 @@
 .experience-wrapper .projects .project .video-wrapper .project-info .project-title {
     display: block;
     /* font-size: 20px; */
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     -webkit-text-stroke: 1px white; 
     margin-bottom: 4px;
@@ -81,7 +81,7 @@
 
 .experience-wrapper .projects .project .video-wrapper .project-info .project-button {
     /* font-size: 12px; */
-    font-size: 7px;
+    font-size: 10px;
     margin-left: 8px;
     padding: 4px;
     font-weight: bolder;
@@ -103,7 +103,7 @@
 
 .experience-wrapper .projects .project .video-wrapper .project-info .project-description {
     /* font-size: 12px; */
-    font-size: 5px;
+    font-size: 8px;
     font-style: oblique;
     margin-top: 6px;
 }
@@ -120,7 +120,7 @@
     padding: 6px;
     color: var(--lightest-blue);
     font-weight: 500;
-    font-size: 10px;
+    font-size: 8px;
     margin: 8px 2px;
     display: inline-block;
 }
