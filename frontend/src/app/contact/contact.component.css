@@ -311,9 +311,15 @@
 
 @media (min-width: 425px) {
 
+    .contact-wrapper .title {
+        margin-bottom: 0px;
+    }
+
     .contact-wrapper .iphone {
-        width: 280px;
-        height: 612px;
+        /* width: 280px;
+        height: 612px; */
+        width: 256px;
+        height: 561px;
         bottom: 30px;
     }
     
@@ -324,10 +330,6 @@
 }
 
 @media (min-width: 768px) {
-
-    .contact-wrapper .title {
-        margin-bottom: 0px;
-    }
 
     .contact-wrapper .iphone {
         width: 300px;
