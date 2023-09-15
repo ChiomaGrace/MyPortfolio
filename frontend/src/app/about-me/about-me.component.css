@@ -38,6 +38,7 @@
     padding: 0px 40px;
     text-align: left;
     color: var(--slate);
+    font-size: 14px;
 }
 
 .about-me-wrapper .slider .dots-container {
@@ -289,10 +290,6 @@
     }
 
     .about-me-wrapper .slider .slide-content .slide-text.slide-active {
-        display: block;
-        padding: 0px 40px;
-        text-align: left;
-        color: var(--slate);
         padding-bottom: 10px;
     }
 }

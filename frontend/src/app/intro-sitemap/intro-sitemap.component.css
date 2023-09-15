@@ -6,6 +6,7 @@
     width: 100%;
     overflow-y: auto;
     padding: 0px 20px;
+    font-family: inherit;
 }
 
 .intro-sitemap-wrapper .description {
@@ -21,7 +22,7 @@
     /* color: var(--slate-purple); */
     color: black;
     padding-bottom: 4px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .intro-sitemap-wrapper .description .strike-through {
@@ -51,7 +52,8 @@
     /* color: var(--slate); */
     color: black;
     letter-spacing: .3px;
-    font-size: 17px;
+    /* font-size: 17px; */
+    font-size: 11px;
     padding-top: 2px;
     line-height: 1.5;
 }
@@ -162,6 +164,11 @@
     text-decoration: none;
 }
 
+.intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text p {
+    font-size: 12px;
+    padding: 0px 1px;
+}
+
 @media (min-width: 375px) {
 
     .intro-sitemap-wrapper .description {
@@ -188,7 +195,7 @@
     }
 
     .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text p {
-        font-size: 14px;
+        /* font-size: 14px; */
         padding: 0px 1px;
     }
 
@@ -225,11 +232,11 @@
 
 
     .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text h3 {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text p {
-        font-size: 20px;
+        font-size: 14px;
     }
 
 }
@@ -337,6 +344,14 @@
         flex: 45%;
         margin-right: 20px;
         height: 120px;
+    }
+
+    .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text h3 {
+        font-size: 22px;
+    }
+
+    .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text p {
+        font-size: 14px;
     }
 
     .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text {

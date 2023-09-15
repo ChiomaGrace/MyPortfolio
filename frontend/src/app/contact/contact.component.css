@@ -41,6 +41,7 @@
     font-size: 8px;
     color: white;
     background-color: rgba(11, 10, 10, 0.92);
+    border-radius: 8px;
 }
 
 .contact-wrapper .iphone .screen .display-settings .clock-container {
@@ -73,7 +74,7 @@
     /* width: 100px; */
     /* width: 80px; */
     /* height: 15px; */
-    height: 11px;
+    height: 9px;
     border-radius: 0px 0px 20px 20px;
 }
 
@@ -298,7 +299,7 @@
 
     .contact-wrapper .iphone .email-template .email-composition {
         margin-top: 10px;
-        width: fit-content;
+        width: 100%;
  
      }
     

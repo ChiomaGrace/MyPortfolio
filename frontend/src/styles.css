@@ -192,8 +192,12 @@ a {
     /* color: white; */
     /* color: var(--purple); */
     color: var(--slate);
-    margin-left: 6px;
+    margin-left: 2px;
     font-size: 10px;
+}
+
+.container .page .content .window-bar .windowTab .fa-times {
+    padding-left: 4px;
 }
 
 .container .page .content .window-bar .windowTab:hover i {
@@ -281,6 +285,10 @@ a {
     
     .container .page .content .windowTab p {
         font-size: 14px;
+    }
+
+    .container .page .content .window-bar .windowTab i {
+        margin-left: 6px;
     }
 
     .container .page .side-bar i {

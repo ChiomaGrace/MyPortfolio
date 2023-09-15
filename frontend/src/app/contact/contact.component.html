@@ -50,6 +50,8 @@
                             <td class="author" *ngIf="hasSubmittedSuccessfully">
                                 <input placeholder="{{submittedEmail.lastName}}">
                             </td>
+                        </tr>
+                        <tr>
                             <td class="author" [ngClass]="{errorStyling : emailFormErrors.errors.emailAddress.message != undefined, successStyling : hasSubmittedSuccessfully}">
                                 <input placeholder="Email Address" type="text" name="emailAddress" size="24" [(ngModel)]="submittedEmail.emailAddress">
                             </td>
