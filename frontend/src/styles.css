@@ -226,16 +226,16 @@ a {
 .container .status-bar {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color: var(--purple);
-    height: 22px;
+    height: 54px;
 }
 
 .container .status-bar i {
-    font-size: 10px;
+    font-size: 20px;
     color: white;
-    padding: 6px;
+    padding: 14px;
 }
 
 .container .status-bar p {
