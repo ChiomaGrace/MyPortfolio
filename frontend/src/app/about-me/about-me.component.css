@@ -44,17 +44,20 @@
     display: flex;
     justify-content: center;
     margin-bottom: 6px;
+    cursor: pointer;
 }
 
 .about-me-wrapper .slider .dots-container .fa-circle {
     font-size: 10px;
-    color: #fff;
+    /* color: #fff; */
+    color: var(--slate);
     opacity: .5;
     margin: 6px 4px;
 }
 
 .about-me-wrapper .slider .dots-container .dot-active {
-    color: #fff;
+    /* color: #fff; */
+    color: var(--blurple);
     opacity: 1;
 }
 
@@ -62,7 +65,8 @@
     position: relative;
     transform: translate(0, calc(100% - 242px));
     font-size: 24px;
-    color: #fff;
+    /* color: #fff; */
+    color: var(--blurple);
     z-index: 1;
     cursor: pointer;
 }
@@ -86,6 +90,7 @@
     width: 258px;
     perspective: 1000px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .about-me-wrapper .column .flip-card-container .flip-card-inner {
@@ -124,7 +129,6 @@
 
 .about-me-wrapper .column .flip-card-container .flip-card-back {
     transform: rotateY(180deg);
-    /* background: linear-gradient(180deg, rgba(86, 128, 233) 1.48%, rgba(132, 206, 235, 0.68) 12.52%, rgba(136, 146, 176, 0.9) 94%), url('../../assets/images/england-celebration.jpg'); */
     background: linear-gradient(235deg, rgba(86, 128, 233) 1.48%, rgba(132, 206, 235, 0.68) 12.52%, rgba(136, 146, 176, 0.9) 94%), url('../../assets/images/england-celebration.jpg');
     background-size: cover;
     background-position-x: -46px;
@@ -164,10 +168,6 @@
 .about-me-wrapper .column .flip-card-container .flip-card-back .flip-card-row .flip-card-column p:nth-child(2) {
     font-weight: 900;
 }
-
-/* .about-me-wrapper .column .flip-card-container .flip-card-back .flip-card-row .flip-card-column h3, .about-me-wrapper .column .flip-card-container .flip-card-back .flip-card-row .flip-card-column span {
-    color: red;
-} */
 
 .about-me-wrapper .column .flip-card-container .flip-card-back .flip-card-row .flip-card-column h3 {
     color: red;
@@ -404,13 +404,25 @@
         flex-basis: 50%;
     }
 
+    .about-me-wrapper .slider .slide-content .slide-text {
+        font-size: 22px;
+    }
+
     .about-me-wrapper .column:last-child {
         text-align: center;
+    }
+
+    .flip-card-front {
+        background-color: transparent;
+        width: 290px;
+        height: 290px;
     }
 
     .about-me-wrapper .column .flip-card-container .flip-card-front .profile-pic {
         width: 200px;
         height: 200px;    
+        /* width: 280px;
+        height: 280px;     */
     }
     
 }

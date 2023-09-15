@@ -145,7 +145,7 @@
     text-align: center;
     margin-bottom: 10px;
     /* background-color: var(--slate); */
-    color: var(--slate-purple);
+    color: black
 }
 
 .specific-skill:nth-child(1) {
@@ -160,10 +160,10 @@
 .experience-wrapper .skills-section .specific-skill i {
     font-size: 44px;
     text-align: center;
+    color: var(--blurple);
     /* color: var(--slate-purple); */
-    color: var(--lightest-blue);
+    /* color: var(--lightest-blue); */
     /* background-color: var(--slate); */
-    /* background-color: var(--blurple); */
     border-radius: 40px;
     padding: 10px;
 }
@@ -172,7 +172,8 @@
     font-family: "eurostile", sans-serif;
     font-weight: 800;
     /* color: var(--slate); */
-    color: white;
+    /* color: white; */
+    color: #5a5a5a;
     margin-bottom: 20px;
 }
 

@@ -18,7 +18,8 @@
 }
 
 .intro-sitemap-wrapper .description h5 {
-    color: var(--slate-purple);
+    /* color: var(--slate-purple); */
+    color: black;
     padding-bottom: 4px;
     font-size: 18px;
 }
@@ -30,7 +31,8 @@
 }
 
 .intro-sitemap-wrapper .description .slim-shady {
-    color: var(--slate-purple);
+    /* color: var(--slate-purple); */
+    color: black;
 }
 
 .intro-sitemap-wrapper .description h2 {
@@ -40,13 +42,14 @@
 }
 
 .intro-sitemap-wrapper .description h3 {
-    color: white;
+    color: black;
     margin-bottom: 6px;
     font-size: 20px;
 }
 
 .intro-sitemap-wrapper .description p {
-    color: var(--slate);
+    /* color: var(--slate); */
+    color: black;
     letter-spacing: .3px;
     font-size: 17px;
     padding-top: 2px;
@@ -72,8 +75,9 @@
 .intro-sitemap-wrapper .heading {
     flex: 1 0 100%;
     text-align: center;
-    color: white;
+    color: var(--darker-blue);
     margin: 20px auto 20px 0px;
+    cursor: default;
 }
 
 .intro-sitemap-wrapper .site-map-items {
@@ -90,14 +94,17 @@
     margin-bottom: 12px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     position: relative;
     width: 100%;
     border-radius: 6px;
-    background-color: #282727;
-    color: var(--slate);
+    /* background-color: #282727; */
+    /* color: var(--slate); */
+    /* background-color: lavender; */
+    color: black;
     margin-bottom: 20px;
     overflow: hidden;
-    border: 1px solid var(--darker-blue);
+    border: 4px solid var(--darker-blue);
 }
 
 .intro-sitemap-wrapper .site-map-items .site-map-item .triangle {
@@ -132,7 +139,6 @@
 
 .intro-sitemap-wrapper .site-map-items .site-map-item:hover > .site-map-text h3 {
     color: var(--white);
-
 }
 
 .intro-sitemap-wrapper .site-map-items .site-map-item:hover > .site-map-text {
@@ -145,12 +151,14 @@
 
 .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text {
     flex: 1 0 80%;
-    font-size: 14px;
+    font-size: 10px;
     margin-left: 50px;
+    margin-bottom: 4px;
 }
 
 .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text h3 {
-    color: var(--slate-purple);
+    /* color: var(--slate-purple); */
+    color: black;
     text-decoration: none;
 }
 
@@ -164,6 +172,13 @@
         height: 78px;
     }
 
+    .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text {
+        flex: 1 0 80%;
+        font-size: 10px;
+        margin-left: 50px;
+        margin-bottom: 0px;
+    }
+
     .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text h3, .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text p {
         margin-left: 8px;
     }
@@ -173,7 +188,7 @@
     }
 
     .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text p {
-        font-size: 16px;
+        font-size: 14px;
         padding: 0px 1px;
     }
 
@@ -272,6 +287,11 @@
         margin-bottom: 12px;
     }
 
+    .intro-sitemap-wrapper .site-map-items .site-map-item {
+        max-width: 278px;
+        height: 109px;
+    }
+
     .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text {
         font-size: 14px;
         position: relative;
@@ -279,7 +299,6 @@
     }
 
 }
-
 /* The above code is for a media query(tablet) */
 
 
@@ -296,6 +315,18 @@
         margin-top: 16px;
     }
 
+    .intro-sitemap-wrapper .description h5 {
+        font-size: 17.28px;
+    }
+
+    .intro-sitemap-wrapper .description h2 {
+        font-size: 30px;
+    }
+
+    .intro-sitemap-wrapper .description p {
+        font-size: 20px;
+    }
+
     .intro-sitemap-wrapper .site-map-items {
         margin-left: 12px;
         flex: 100%;
@@ -303,8 +334,9 @@
 
     .intro-sitemap-wrapper .site-map-items .site-map-item {
         max-width: none;
-        flex: 40%;
+        flex: 45%;
         margin-right: 20px;
+        height: 120px;
     }
 
     .intro-sitemap-wrapper .site-map-items .site-map-item .site-map-text {
