@@ -6,7 +6,7 @@
     height: 100%;
     overflow-x:  hidden;
     overflow-y: scroll;
-    font-family: cursive;
+    font-family: system-ui;
 }
 
 .about-me-wrapper .column:first-child {

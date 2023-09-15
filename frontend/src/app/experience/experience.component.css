@@ -7,7 +7,7 @@
     height: 100%; /* to get the scrollbar to take up whole height/where the window-tabs are to the footer */
     /* overflow-x: hidden; */
     overflow-y: scroll;
-    font-family: cursive;
+    font-family: system-ui;
 }
 
 .experience-wrapper .heading {
