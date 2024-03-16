@@ -128,8 +128,8 @@
 
 .about-me-wrapper .column .flip-card-container .flip-card-front .profile-pic {
     border: solid 4px var(--blurple);
-    width: 130px;
-    height: 130px;
+    width: 230px;
+    height: 230px;
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
 }
 
@@ -287,7 +287,7 @@
 @media (min-width: 375px) {
 
     .about-me-wrapper .column:first-child {
-        margin-top: 30px;
+        margin-top: 110px;
     }
 
     .about-me-wrapper .slider .left-arrow, .about-me-wrapper .slider .right-arrow {
