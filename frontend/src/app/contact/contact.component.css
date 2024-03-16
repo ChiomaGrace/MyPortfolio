@@ -288,7 +288,6 @@
     }
 
     .contact-wrapper .iphone .email-template .email-title-section .email-title {
-        /* flex: 1; */
         width: 80%;
         font-weight: 600;
         font-size: 22px;
@@ -333,8 +332,8 @@
 @media (min-width: 768px) {
 
     .contact-wrapper .iphone {
-        width: 300px;
-        height: 656px;
+        width: 274px;
+        height: 600px;
     }
     
     .contact-wrapper .iphone .screen .notch {
@@ -371,4 +370,13 @@
     .contact-wrapper .iphone .screen .notch {
         height: 10px;
     }
+}
+
+@media (min-width: 1440px) {
+
+    .contact-wrapper .iphone {
+        width: 284px;
+        height: 623px;
+    }
+
 }

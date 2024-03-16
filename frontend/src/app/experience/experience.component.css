@@ -14,7 +14,6 @@
     display: block;
     color: var(--blurple);
     margin-bottom: 20px;
-    /* margin-top: 30px; */
 }
 
 .experience-wrapper .projects {
@@ -44,6 +43,7 @@
     filter: brightness(68%);
     border: solid 10px var(--blurple);
     object-fit: cover; 
+    box-shadow: 5px 5px 5px 5px hsla(0, 0%, 0%, 0.1);
 }
 
 .experience-wrapper .projects .project .video-wrapper .project-video:hover {
@@ -137,35 +137,20 @@
 }
 
 .experience-wrapper .skills-section .specific-skill {
-    /* background-color: white; */
     flex: 1;
-    /* border: solid 4px var(--slate); */
-    /* border: solid 4px var(--purple); */
     border: solid 4px var(--blurple);
     width: 90%;
     text-align: center;
     font-size: 12px;
     margin-bottom: 10px;
-    /* background-color: var(--slate); */
-    color: black
-}
-
-.specific-skill:nth-child(1) {
-}
-
-.specific-skill:nth-child(2) {
-}
-
-.specific-skill:nth-child(3) {
+    color: black;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.1);
 }
 
 .experience-wrapper .skills-section .specific-skill i {
     font-size: 44px;
     text-align: center;
     color: var(--blurple);
-    /* color: var(--slate-purple); */
-    /* color: var(--lightest-blue); */
-    /* background-color: var(--slate); */
     border-radius: 40px;
     padding: 10px;
 }
@@ -220,9 +205,6 @@
 }
 
 @media (min-width: 768px) {
-
-    .experience-wrapper .projects .project .video-wrapper {
-    }
 
     .experience-wrapper .projects .project .video-wrapper .collegebook-phone-video {
         display: none;

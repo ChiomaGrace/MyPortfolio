@@ -1,51 +1,18 @@
 <div class="container">
-  <!-- <div class="menu-bar">
-    <div class="column">
-      <img src="assets/images/vs-code-icon.png" alt="Visual Studios Logo">
-      <button>&#9776;</button>
-    </div>
-    <div class="column">
-      <p class="menu-bar-title">Welcome - Visual Studios Code</p>
-    </div>
-    <div class="column">
-      <i class="fas fa-window-minimize"></i>
-      <i class="fas fa-window-restore"></i>
-      <i class="fas fa-times"></i>
-    </div>
-  </div> -->
   <div class="page">
-    <!-- <div class="side-bar">
-      <a href="https://github.com/ChiomaGrace">
-        <i class="fa-brands fa-github" alt="Github" title="GitHub"></i>
-      </a>
-      <a href="mailto:chiomau@alumni.stanford.edu">
-        <i class="fa-solid fa-envelope" alt="Email" title="Email"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/chioma-ubogagu-4907b890">
-        <i class="fa-brands fa-linkedin" alt="LinkedIn" title="LinkedIn"></i>
-      </a>
-      <a href="https://www.youtube.com/watch?v=rmSvcZjl1RA">
-        <i class="fa-brands fa-youtube" alt="YouTube" title="YouTube"></i>
-      </a>
-      <a target="_blank" href="../assets/documents/resume.pdf" >
-        <i class="fa-solid fa-file" alt="Resume" title="Resume"></i>
-      </a>
-      <i class="fas fa-user-circle"></i>
-      <i class="fas fa-cog"></i>
-    </div> -->
     <div class="content">
       <div class="window-bar">
         <div class="windowTab" [ngClass]="welcomeNavStyling" *ngIf = "showWelcomeNavItem == true; else notHomePage">
           <i class="fa-solid fa-door-open"></i>
           <p>Welcome</p>
-          <i class="fas fa-times"></i>
+          <!-- <i class="fas fa-times"></i> -->
         </div>
           <ng-template #notHomePage>
             <a class="button" type="button" routerLink="/" (click)="homeNavItem()" *ngIf ="showNavItems">
               <div class="windowTab">
                 <i class="fa-solid fa-house"></i>
                 <p>Home</p>
-                <i class="fas fa-times"></i>
+                <!-- <i class="fas fa-times"></i> -->
               </div>
             </a>
           </ng-template>
@@ -53,28 +20,28 @@
           <div class="windowTab" [ngClass]="aboutMeNavStyling" (click)="aboutMeNavLink()" *ngIf ="showNavItems">
             <i class="fa-solid fa-child-reaching"></i>
             <p>About Me</p>
-            <i class="fas fa-times"></i>
+            <!-- <i class="fas fa-times"></i> -->
           </div>
         </a>
         <a class="button" type="button" routerLink="experience">
           <div class="windowTab" [ngClass]="experienceNavStyling" (click)="experienceNavLink()" *ngIf ="showNavItems">
             <i class="fa-solid fa-pencil"></i>
             <p>Experience</p>
-            <i class="fas fa-times"></i>
+            <!-- <i class="fas fa-times"></i> -->
           </div>
         </a>
         <a class="button" type="button" routerLink="work">
           <div class="windowTab" [ngClass]="workNavStyling" (click)="workNavLink()" *ngIf ="showNavItems">
             <i class="fa-solid fa-laptop"></i>
             <p>Work</p>
-            <i class="fas fa-times"></i>
+            <!-- <i class="fas fa-times"></i> -->
           </div>
         </a>
         <a class="button" type="button" routerLink="contact">
           <div class="windowTab" [ngClass]="contactNavStyling" (click)="contactNavLink()" *ngIf ="showNavItems">
             <i class="fa-solid fa-address-book"></i>
             <p>Contact</p>
-            <i class="fas fa-times"></i>
+            <!-- <i class="fas fa-times"></i> -->
           </div>
         </a>
       </div>
@@ -86,14 +53,6 @@
     </div>
   </div>
   <div class="status-bar">
-    <!-- <i class="fas fa-times-circle"></i>
-    <p>0</p>
-    <i class="fas fa-exclamation-triangle"></i>
-    <p>0</p>
-    <i class="fas fa-share"></i>
-    <p>Live Share</p>
-    <i class="fas fa-smile"></i>
-    <i class="far fa-bell"></i> -->
     <a href="https://github.com/ChiomaGrace">
       <i class="fa-brands fa-github" alt="Github" title="GitHub"></i>
     </a>

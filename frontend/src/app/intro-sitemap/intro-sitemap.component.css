@@ -72,6 +72,7 @@
     display: block;
     width: 70%;
     margin: 10px 0px;
+    box-shadow: 5px 5px 5px 5px hsla(0, 0%, 0%, 0.1);
 }
 
 .intro-sitemap-wrapper .heading {
@@ -106,7 +107,9 @@
     color: black;
     margin-bottom: 20px;
     overflow: hidden;
-    border: 4px solid var(--darker-blue);
+    border: 1px solid var(--darker-blue);
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+
 }
 
 .intro-sitemap-wrapper .site-map-items .site-map-item .triangle {
