@@ -1,74 +1,21 @@
 <div class="container">
-  <div class="page">
-    <div class="content">
-      <div class="window-bar">
-        <div class="windowTab" [ngClass]="welcomeNavStyling" *ngIf = "showWelcomeNavItem == true; else notHomePage">
-          <i class="fa-solid fa-door-open"></i>
-          <p>Welcome</p>
-          <!-- <i class="fas fa-times"></i> -->
-        </div>
-          <ng-template #notHomePage>
-            <a class="button" type="button" routerLink="/" (click)="homeNavItem()" *ngIf ="showNavItems">
-              <div class="windowTab">
-                <i class="fa-solid fa-house"></i>
-                <p>Home</p>
-                <!-- <i class="fas fa-times"></i> -->
-              </div>
-            </a>
-          </ng-template>
-        <a class="button" type="button" routerLink="about-me">
-          <div class="windowTab" [ngClass]="aboutMeNavStyling" (click)="aboutMeNavLink()" *ngIf ="showNavItems">
-            <i class="fa-solid fa-child-reaching"></i>
-            <p>About Me</p>
-            <!-- <i class="fas fa-times"></i> -->
-          </div>
-        </a>
-        <a class="button" type="button" routerLink="experience">
-          <div class="windowTab" [ngClass]="experienceNavStyling" (click)="experienceNavLink()" *ngIf ="showNavItems">
-            <i class="fa-solid fa-pencil"></i>
-            <p>Experience</p>
-            <!-- <i class="fas fa-times"></i> -->
-          </div>
-        </a>
-        <a class="button" type="button" routerLink="work">
-          <div class="windowTab" [ngClass]="workNavStyling" (click)="workNavLink()" *ngIf ="showNavItems">
-            <i class="fa-solid fa-laptop"></i>
-            <p>Work</p>
-            <!-- <i class="fas fa-times"></i> -->
-          </div>
-        </a>
-        <a class="button" type="button" routerLink="contact">
-          <div class="windowTab" [ngClass]="contactNavStyling" (click)="contactNavLink()" *ngIf ="showNavItems">
-            <i class="fa-solid fa-address-book"></i>
-            <p>Contact</p>
-            <!-- <i class="fas fa-times"></i> -->
-          </div>
-        </a>
-      </div>
-      <app-about-me *ngIf="showAboutMeComponent" [clickedHomeNavItem]="homeNavItem"></app-about-me>
-      <app-experience *ngIf="showExperienceComponent" [clickedHomeNavItem]="homeNavItem"></app-experience>
-      <app-work *ngIf="showWorkComponent" [clickedHomeNavItem]="homeNavItem"></app-work>
-      <app-contact *ngIf="showContactComponent" [clickedHomeNavItem]="homeNavItem"></app-contact>
-      <app-intro-sitemap *ngIf="showIntroSiteMapComponent" (aboutMeEvent)="showHideAboutMeComponent($event)" (experienceEvent)="showHideExperienceComponent($event)" (workEvent)="showHideWorkComponent($event)" (contactEvent)="showHideContactComponent($event)" ></app-intro-sitemap>
+  <div class="nav-container">
+    <i class="fa-solid fa-door-open"></i>
+    <p class="welcome-nav-item" id="welcome-nav-item" (click)="goToPart('intro')">Welcome</p>
+    <div class="right-nav-items">
+      <p class="nav-item" (click)="goToPart('about-me')">About Me</p>
+      <i class="fa-solid fa-circle"></i>
+      <p class="nav-item" (click)="goToPart('experience')">Experience</p>
+      <p class="nav-item" (click)="goToPart('work')">Work</p>
+      <p class="nav-item" (click)="goToPart('contact')">Contact</p>
+      <p class="back-to-top" (click)="scrollToTop()">Back to Top</p>
     </div>
   </div>
-  <div class="status-bar">
-    <a href="https://github.com/ChiomaGrace">
-      <i class="fa-brands fa-github" alt="Github" title="GitHub"></i>
-    </a>
-    <a href="mailto:chiomau@alumni.stanford.edu">
-      <i class="fa-solid fa-envelope" alt="Email" title="Email"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/chioma-ubogagu-4907b890">
-      <i class="fa-brands fa-linkedin" alt="LinkedIn" title="LinkedIn"></i>
-    </a>
-    <a href="https://www.youtube.com/watch?v=rmSvcZjl1RA">
-      <i class="fa-brands fa-youtube" alt="YouTube" title="YouTube"></i>
-    </a>
-    <a target="_blank" href="../assets/documents/resume.pdf" >
-      <i class="fa-solid fa-file" alt="Resume" title="Resume"></i>
-    </a>
-  </div>
+  <app-intro id="intro"></app-intro>
+  <app-experience id="experience"></app-experience>
+  <app-about-me id="about-me"></app-about-me>
+  <app-work id="work"></app-work>
+  <app-contact id="contact"></app-contact>
 </div>
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>
 

@@ -1,18 +1,22 @@
 .work-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    height: 100%;
-    /* overflow: hidden; */
-    /* overflow-y: scroll; */
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     font-family: system-ui;
+    margin-top: 320px;
+    align-items: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-bottom: 80px;
 }
 
 .work-wrapper .title {
     display: block;
+    font-size: 30px;
+    font-family: auto;
+    font-weight: 400;
     text-align: center;
-    color: var(--blurple);
+    color: black;
+    margin: 40px 0px 40px 0px;
 }
 
 .work-wrapper .business-card {
@@ -27,7 +31,7 @@
 }
 
 .work-wrapper .business-card .row:first-child {
-    flex: 0 0 46%;
+    flex: 0 0 34%;
 }
 
 .work-wrapper .business-card .row .text-info {
@@ -59,11 +63,6 @@
 }
 
 @media (min-width: 375px) {
-
-    .work-wrapper .business-card {
-        width: 80%;
-    }
-
     .work-wrapper .business-card .row:first-child {
         flex: 1;
     }
@@ -71,11 +70,6 @@
 }
 
 @media (min-width: 425px) {
-
-    .work-wrapper .business-card {
-        width: 310px;
-    }
-
     .work-wrapper .business-card .row:first-child {
         flex: 1;
     }
@@ -91,6 +85,9 @@
 }
 
 @media (min-width: 768px) {
+    .work-wrapper {
+        margin: 2rem 8rem;        
+    }
     
     .work-wrapper .business-card {
         width: 500px;

@@ -1,16 +1,15 @@
+<h1 class="heading">About Me</h1>
 <div class="about-me-wrapper ">
     <div class="column slider">
-      <!-- <div class="arrows"> -->
         <div class="left-arrow">
           <i class="fa-solid fa-chevron-left" (click)="goToPrev()"></i>
         </div>
         <div class="right-arrow">
           <i class="fa-solid fa-chevron-right" (click)="goToNext()"></i>
         </div>
-      <!-- </div>  -->
-      <h1 class="title"> About Me</h1>
-      <div class="slide-content" *ngIf = "slideContent && slideContent.length > 0">
-        <p class="slide-text" *ngFor="let slide of slideContent; let i=index" [ngClass] = "{'slide-active' : selectedIndex === i}"> {{slide.content}}</p>
+        <div class="slide-content" *ngIf = "slideContent && slideContent.length > 0">
+          <!-- <h1 class="title"> About Me</h1> -->
+          <p class="slide-text" *ngFor="let slide of slideContent; let i=index" [ngClass] = "{'slide-active' : selectedIndex === i}"> {{slide.content}}</p>
       </div>
       <div class="dots-container">
         <i *ngFor="let dot of slideContent; let i = index" [ngClass]= "{'dot-active': selectedIndex === i}" (click)="showCurrentSlide(i)" class="fa-solid fa-circle"></i>

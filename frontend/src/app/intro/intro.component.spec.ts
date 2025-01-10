@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IntroSitemapComponent } from './intro-sitemap.component';
+import { IntroSitemapComponent } from './intro.component';
 
 describe('IntroSitemapComponent', () => {
   let component: IntroSitemapComponent;

@@ -6,10 +6,10 @@ declare var jQuery: any;
 
 
 @Component({
-  selector: 'app-intro-sitemap',
-  templateUrl: './intro-sitemap.component.html',
-  styleUrls: ['./intro-sitemap.component.css'],
-  host: {'class': 'intro-sitemap-container'}
+  selector: 'app-intro',
+  templateUrl: './intro.component.html',
+  styleUrls: ['./intro.component.css'],
+  host: {'class': 'intro-container'}
 
 })
 export class IntroSitemapComponent implements OnInit {

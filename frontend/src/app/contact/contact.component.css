@@ -3,15 +3,20 @@
     grid-template-columns: 1fr;
     justify-items: center;
     height: 100%;
-    /* overflow: hidden; */
     overflow-x: hidden;
     font-family: system-ui;
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
 }
 
 .contact-wrapper .title {
     display: block;
+    font-size: 30px;
+    font-family: auto;
+    font-weight: 400;
     text-align: center;
-    color: var(--blurple);
+    color: black;
+    margin: 20px 0px 30px 0px;
 }
 
 .contact-wrapper .iphone {
@@ -22,7 +27,6 @@
     height: 448px;
     position: relative;
     box-shadow: 0px 20px 15px #33333335;
-    bottom: 120px;
 }
 
 .contact-wrapper .iphone .screen {
@@ -51,7 +55,6 @@
 }
 
 .contact-wrapper .iphone .screen .display-settings .general-settings-container {
-    /* margin-right: auto; */
     margin-right: 12px;
 }
 
@@ -67,14 +70,9 @@
     align-items: end;
     justify-content: flex-start;
     top: 0;
-    /* left: 50px; */
-    /* left: 56px; */
     left: 63px;
     width: 70px;
     background-color: black;
-    /* width: 100px; */
-    /* width: 80px; */
-    /* height: 15px; */
     height: 9px;
     border-radius: 0px 0px 20px 20px;
 }
@@ -83,7 +81,6 @@
     width: 10px;
     height: 10px;
     margin-left: 4px;
-    /* margin-bottom: 3px; */
     margin-bottom: -1px;
     border-radius: 50%;
     border: 0.2rem solid black;
@@ -108,7 +105,6 @@
 
 .contact-wrapper .iphone .email-template {
     width: 190px;
-    /* height: 424px; */
     height: 350px;
     display: flex;
     flex-direction: column;
@@ -129,10 +125,6 @@
    margin-top: 14px;
 }
 
-/* .contact-wrapper .iphone .email-template .email-title-section .email-title {
-    flex: 1;
-} */
-
 .contact-wrapper .iphone .email-template .email-title-section .email-title {
     flex: 1;
     font-size: 16px;
@@ -141,10 +133,6 @@
     font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 900;
 }
-
-/* .contact-wrapper .iphone .email-template .email-title-section .email-title input {
-    all: unset;
-}  */
 
 .contact-wrapper .iphone .email-template .email-title-section .email-title::placeholder {
     color: black;
@@ -182,7 +170,6 @@
  }
 
  .contact-wrapper .iphone .email-template .email-composition tr:nth-child(2) td {
-    /* font-size: 3px; */
     margin-top: 3px;
     width: 78px;
  } 
@@ -194,7 +181,6 @@
 .contact-wrapper .iphone .email-template .email-composition .recipient-label, .contact-wrapper .iphone .email-template .email-composition .author-label, .contact-wrapper .iphone .email-template .email-composition .subject-label {
     height: 26px;
     color: #929295;
-    /* display: inline-block; */
     position: relative;
     margin-right: 4px;
     top: 5px;
@@ -205,11 +191,9 @@
  } 
 
  .contact-wrapper .iphone .email-template .email-composition .recipient {
-    /* display: inline-block; */
     color:#007AFD;
     border-radius: 4px;
     padding: 4px;
-    /* margin-left: 4px; */
  }
 
  .contact-wrapper .iphone .email-template .email-composition .recipient:hover {
@@ -262,21 +246,12 @@
 }
 
 @media (min-width: 375px) {
-
-    .contact-wrapper .title {
-        margin-bottom: 64px;
-    }
-
     .contact-wrapper .iphone {
-        /* width: 228px; */
         width: 220px;
-        /* height: 497px; */
         height: 480px;
-        bottom: 50px;
     }
     
     .contact-wrapper .iphone .screen .notch {
-        /* width: 124px; */
         width: 90px;
         left: 63px;
     }
@@ -310,34 +285,27 @@
 }
 
 @media (min-width: 425px) {
-
-        .contact-wrapper .title {
-        margin-bottom: 0px;
-    }
-
     .contact-wrapper .iphone {
-        /* width: 280px;
-        height: 612px; */
         width: 256px;
         height: 561px;
-        bottom: 30px;
     }
     
     .contact-wrapper .iphone .screen .notch {
-        /* left: 76px; */
-        left: 92px;
+        left: 80px;
     }
 }
 
 @media (min-width: 768px) {
-
+    .contact-wrapper {
+        margin: 0rem 8rem;
+    }
     .contact-wrapper .iphone {
         width: 274px;
         height: 600px;
     }
     
     .contact-wrapper .iphone .screen .notch {
-        left: 105px;
+        left: 86px;
     }
 
     .contact-wrapper .iphone .screen .display-settings, .contact-wrapper .iphone .screen .display-settings .general-settings-container i {
@@ -361,22 +329,28 @@
 }
 
 @media (min-width: 1024px) {
-
     .contact-wrapper .iphone {
         width: 198px;
         height: 434px;
     }
 
     .contact-wrapper .iphone .screen .notch {
-        height: 10px;
+        height: 6px;
+        left: 60px;
+        width: 74px;
     }
 }
 
 @media (min-width: 1440px) {
-
     .contact-wrapper .iphone {
         width: 284px;
         height: 623px;
+    }
+
+    .contact-wrapper .iphone .screen .notch {
+        height: 6px;
+        left: 90px;
+        width: 94px;
     }
 
 }

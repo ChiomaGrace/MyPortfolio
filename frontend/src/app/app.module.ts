@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IntroSitemapComponent } from './intro-sitemap/intro-sitemap.component';
+import { IntroSitemapComponent } from './intro/intro.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { WorkComponent } from './work/work.component';
