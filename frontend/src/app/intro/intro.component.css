@@ -1,0 +1,167 @@
+.intro-container {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.intro-container .intro-wrapper {
+    margin-top: 30px;
+}
+
+.intro-container .intro-wrapper .hi-my-name-is, .intro-container .intro-wrapper .i-code-and-i-love-it {
+    font-size: 22px;
+    font-weight:400;
+}
+
+.intro-container .intro-wrapper .slim-shady {
+    color: black;
+}
+
+.intro-container .intro-wrapper .strike-through {
+    color: red;
+    text-decoration: line-through;
+    text-decoration-thickness: 4px;
+}
+
+.intro-container .intro-wrapper .name {
+    color: var(--blurple);
+}
+
+.intro-container .intro-wrapper .description {
+    color: black;
+    letter-spacing: .3px;
+    font-size: 16px;
+    padding: 24px 0px;
+    line-height: 1.2;
+}
+
+.intro-container .intro-wrapper .simpleview {
+    color: black;
+    text-decoration: none;
+    font-style: italic;
+    
+}
+
+.intro-container .intro-wrapper .simpleview:hover {
+    text-decoration: underline;
+}
+
+.intro-container img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+.intro-container .socials {
+    align-self: flex-end;
+    margin: 30px 0px 20px 0px;
+}
+
+.intro-container .socials a{
+    color: var(--blurple);
+    margin: 4px 6px;
+}
+
+@media (min-width: 375px) {
+
+}
+
+@media (min-width: 425px) {
+
+}
+
+@media (min-width: 768px) {
+    .intro-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .intro-container .intro-wrapper{
+        flex: 1 0 32%;
+        align-self: flex-end;
+        margin-right: 24px;
+    }
+
+    .intro-container .intro-wrapper .hi-my-name-is, .intro-container .intro-wrapper .i-code-and-i-love-it {
+        font-size: 24px;
+    }
+
+    .intro-container .intro-wrapper .name {
+        font-size: 38px;
+    }
+
+    .intro-container .intro-wrapper .description {
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .intro-container .intro-wrapper .hi-my-name-is {
+        border-top: 1px solid black;
+        padding-top: 30px;
+    }
+
+    .intro-container .img-container {
+        margin-top: 20px;
+        flex: 1 0 36%;
+    }
+
+    .intro-container .img-container img {
+        max-width: 360px;
+        height: 480px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .intro-container {
+        margin: 0rem 8rem;
+        padding: 0px;
+        align-items: center;
+    }
+
+    .intro-container .intro-wrapper{
+        flex: 1 0 38%;
+        margin-right: 34px;
+    }
+
+    .intro-container .intro-wrapper .description {
+        margin-bottom: 50px;
+    }
+
+    .intro-container .img-container {
+        flex: 0 0 30%;
+    }
+
+    .intro-container .socials {
+        margin-bottom: 50px;
+    }
+
+    .intro-container .socials a{
+      font-size: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .intro-container .intro-wrapper .hi-my-name-is, .intro-container .intro-wrapper .i-code-and-i-love-it {
+        font-size: 36px;
+    }
+
+    .intro-container .intro-wrapper .name {
+        font-size: 46px;
+    }
+
+    .intro-container .intro-wrapper .description {
+        margin-top: 30px;
+        font-size: 24px;
+    }
+
+    .intro-container .img-container img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .intro-container .socials a{
+        font-size: 24px;
+    }
+}

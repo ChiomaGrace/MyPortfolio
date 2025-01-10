@@ -4,29 +4,34 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
-    height: 100%; /* to get the scrollbar to take up whole height/where the window-tabs are to the footer */
-    /* overflow-x: hidden; */
-    overflow-y: scroll;
+    height: 100%; 
     font-family: system-ui;
+    border-bottom: 1px solid black;
+    padding-bottom: 60px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .experience-wrapper .heading {
     display: block;
-    color: var(--blurple);
-    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: auto;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    margin: 40px 0px 40px 0px;
 }
 
 .experience-wrapper .projects {
-    flex: 0 0 90%;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-items: center;
     margin-bottom: 20px;
-}
-
-.experience-wrapper .projects .project {
-    flex: 1;
 }
 
 .experience-wrapper .projects .project .video-wrapper {
@@ -38,16 +43,9 @@
 }
 
 .experience-wrapper .projects .project .video-wrapper .project-video {
-    height: 434px;
+    height: 494px;
     border-radius: 10px;
-    filter: brightness(68%);
-    border: solid 10px var(--blurple);
-    object-fit: cover; 
-    box-shadow: 5px 5px 5px 5px hsla(0, 0%, 0%, 0.1);
-}
-
-.experience-wrapper .projects .project .video-wrapper .project-video:hover {
-    border: solid 10px var(--purple);
+    filter: brightness(70%);
 }
 
 .experience-wrapper .projects .project .video-wrapper .collegebook-video {
@@ -58,7 +56,7 @@
     width: 86%;
     align-self: flex-end;
     position: absolute;
-    bottom: 70px;
+    bottom: 60px;
     left: 4px;
     z-index: 1;
     text-align: left;
@@ -72,15 +70,13 @@
 
 .experience-wrapper .projects .project .video-wrapper .project-info .project-title {
     display: block;
-    /* font-size: 20px; */
     font-size: 16px;
     font-weight: bold;
-    -webkit-text-stroke: 1px white; 
     margin-bottom: 4px;
+    text-decoration: none;
 }
 
 .experience-wrapper .projects .project .video-wrapper .project-info .project-button {
-    /* font-size: 12px; */
     font-size: 10px;
     margin-left: 8px;
     padding: 4px;
@@ -102,7 +98,6 @@
 }
 
 .experience-wrapper .projects .project .video-wrapper .project-info .project-description {
-    /* font-size: 12px; */
     font-size: 8px;
     font-style: oblique;
     margin-top: 6px;
@@ -132,14 +127,12 @@
 .experience-wrapper .skills-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-items: center;
+    flex-basis: 94%;
 }
 
 .experience-wrapper .skills-section .specific-skill {
     flex: 1;
-    border: solid 4px var(--blurple);
-    width: 90%;
+    border: dotted 2px var(--blurple);
     text-align: center;
     font-size: 12px;
     margin-bottom: 10px;
@@ -152,14 +145,11 @@
     text-align: center;
     color: var(--blurple);
     border-radius: 40px;
-    padding: 10px;
 }
 
 .experience-wrapper .skills-section .specific-skill h3 {
     font-family: "eurostile", sans-serif;
     font-weight: 800;
-    /* color: var(--slate); */
-    /* color: white; */
     color: #5a5a5a;
     margin-bottom: 20px;
 }
@@ -170,12 +160,16 @@
     place-items: center;
     grid-row-gap: 20px;
     margin-bottom: 10px; 
-    margin-left: 6px;
 }
 
 .experience-wrapper .skills-section .specific-skill .logos .logo img {
     width: 50px;
     height: 50px;
+}
+
+.experience-wrapper .skills-section .specific-skill .logos .logo p {
+    font-family: auto;
+    font-weight: 600;
 }
 
 .experience-wrapper .skills-section .specific-skill .logos .logo .jquery-logo {
@@ -185,26 +179,21 @@
 @media (min-width: 375px) {
 
     .experience-wrapper .projects .project .video-wrapper .project-video {
-        height: 480px;
-    }
-    
-    .experience-wrapper .skills-section .specific-skill {
-        width: 92%;
+        height: 572px;
     }
 }
 
 @media (min-width: 425px) {
-
     .experience-wrapper .projects .project .video-wrapper .project-video {
         height: 530px;
     }
 
-    .experience-wrapper .skills-section {
-        flex-basis: 80%;
-    }
 }
 
 @media (min-width: 768px) {
+    .experience-wrapper .projects .project {
+        width: 100%;
+    }
 
     .experience-wrapper .projects .project .video-wrapper .collegebook-phone-video {
         display: none;
@@ -212,7 +201,9 @@
 
     .experience-wrapper .projects .project .video-wrapper .collegebook-video {
         display: block;
-        height: 310px;
+        height: 300px;
+        background-color: var(--slate-purple);
+        padding: 2px;
     }
 
     .experience-wrapper .projects .project .video-wrapper .project-info .project-title {
@@ -228,31 +219,61 @@
     }
 
     .experience-wrapper .skills-section {
-        flex-direction: row;
-        flex-basis: 96%;
-        margin-bottom: 80px;
+        flex: 0 0 60%;
     }
 
-    .experience-wrapper .skills-section .specific-skill {
-        height: 100%;
-        margin: 0px 4px;
+    .experience-wrapper .skills-section .specific-skill .logos .logo p {
+        font-size: 14px;
     }
-
 }
 
 @media (min-width: 1024px) {
+    .experience-wrapper {
+        margin: 0rem 8rem;
+    }
+    
+    .experience-wrapper .projects .project {
+        width: 100%;
+    }
 
     .experience-wrapper .projects .project .video-wrapper .collegebook-video {
         display: block;
-        height: 440px;
+    }
+
+    .experience-wrapper .projects .project .video-wrapper .project-info .coding-language-button,  .experience-wrapper .projects .project .video-wrapper .project-info .project-description {
+        font-size: 14px;
+    }
+
+    .experience-wrapper .skills-section .specific-skill:nth-child(3) {
+        margin-left: 12px;
     }
 
 }
 
 @media (min-width: 1440px) {
+    .experience-wrapper .projects .project .video-wrapper .collegebook-video {
+        height: 482px;
+    }
 
-    .experience-wrapper .projects {
-        flex: 0 0 94%;
+    .experience-wrapper .skills-section {
+        flex-direction: row;
+        flex: 0 0 90%;
+        flex-wrap: wrap;
+    }
+
+    .experience-wrapper .skills-section .specific-skill:nth-child(1) {
+        order: 0;
+        margin-right: 40px;
+    }
+
+    .experience-wrapper .skills-section .specific-skill:nth-child(2) {
+        order: 2;
+        flex: 0 0 100%;
+        margin-top: 40px;
+    }
+
+    .experience-wrapper .skills-section .specific-skill:nth-child(3) {
+        order: 1;
     }
     
 }

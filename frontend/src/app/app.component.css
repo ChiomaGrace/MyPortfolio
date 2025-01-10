@@ -1,0 +1,130 @@
+.container{
+    margin: 20px;
+    padding-bottom: 20px;
+}
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid black;
+}
+
+.nav-container i {
+    font-size: 8px;
+    color: var(--slate);
+}
+
+.welcome-nav-item {
+    font-size: 10px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.right-nav-items {
+    margin-left: auto;
+    display: flex;
+    font-family: monospace;
+}
+
+.right-nav-items p {
+    color: black;
+    font-size: 10px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.right-nav-items p:hover {
+    text-decoration: underline;
+}
+
+.right-nav-items i {
+    font-size: 4px;
+    color: var(--slate);
+    position: relative;
+    right: 3px;
+    top: 4px;
+}
+
+.back-to-top {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}
+
+@media (min-width: 375px) {
+    .welcome-nav-item {
+        font-size: 14px;
+    }
+
+    .right-nav-items p {
+        margin-right: 12px;
+    }
+    
+    .right-nav-items i {
+        font-size: 4px;
+        right: 6px;
+        top: 4px;
+    }
+
+}
+
+@media (min-width: 425px) {
+    .container {
+        margin: 0px 60px;
+    }
+
+    .right-nav-items p {
+        margin-right: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-container {
+        margin: 0rem 2rem;
+        border: none;
+    }
+
+    .nav-container i {
+        font-size: 12px;
+    }
+
+    .welcome-nav-item, .right-nav-items p {
+        font-size: 16px;
+    }
+
+    .right-nav-items p {
+        margin-right: 20px;
+    }
+    
+    .right-nav-items i {
+        font-size: 8px;
+        right: 8px;
+        top: 6px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-top: 60px;
+    }
+
+    .nav-container {
+        margin: 0rem 8rem;
+        padding-bottom: 60px;
+    }
+
+    .welcome-nav-item {
+        font-size: 20px;
+    }
+
+    .right-nav-items p:last-of-type {
+        margin-right: 0px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+
+}
